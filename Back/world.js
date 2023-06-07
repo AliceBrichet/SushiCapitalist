@@ -1567,7 +1567,7 @@ module.exports = {
     "angelupgrades": [
         {
             "name": "Nom premier angel upgrade",
-            "logo": "icones/chat.png",
+            "logo": "icones/loutre.png",
             "seuil": 10000,
             "idcible": 0,
             "ratio": 3,
@@ -1576,7 +1576,7 @@ module.exports = {
         },
         {
             "name": "Nom deuxième angel upgrade",
-            "logo": "icones/chat.png",
+            "logo": "icones/loutre.png",
             "seuil": 100000,
             "idcible": 0,
             "ratio": 2,
@@ -1585,7 +1585,7 @@ module.exports = {
         },
         {
             "name": "Nom troisième angel upgrade",
-            "logo": "icones/chat.png",
+            "logo": "icones/loutre.png",
             "seuil": 1000000,
             "idcible": 0,
             "ratio": 2,
@@ -1594,7 +1594,7 @@ module.exports = {
         },
         {
             "name": "Nom quatrième angel upgrade",
-            "logo": "icones/chat.png",
+            "logo": "icones/loutre.png",
             "seuil": 10000000,
             "idcible": 0,
             "ratio": 5,
@@ -1603,7 +1603,7 @@ module.exports = {
         },
         {
             "name": "Nom cinquième angel upgrade",
-            "logo": "icones/chat.png",
+            "logo": "icones/loutre.png",
             "seuil": 100000000,
             "idcible": 0,
             "ratio": 9,
