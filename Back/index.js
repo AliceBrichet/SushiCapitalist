@@ -1,5 +1,6 @@
 const express = require('express');
 const { ApolloServer, gql } = require('apollo-server-express');
+const fs = require('fs').promises
 
 // Construct a schema, using GraphQL schema language
 const typeDefs = require ("./schema");
@@ -9,10 +10,22 @@ const resolvers = require ("./resolvers");
 
 let world = require ("./world");
 
+async function readUserWorld(user) {
+    try {
+        const data = await fs.readFile("userworlds/"+ user + "-world.json");
+        return JSON.parse(data);
+    }
+    catch(error) {
+        console.log(error)
+        return world
+    }
+}
+
 const server = new ApolloServer({ 
     typeDefs, resolvers,
     context: async ({ req }) => ({
-        world : world
+        world : await readUserWorld(req.headers["x-user"]),
+        user: req.headers["x-user"]
     })
 });
 

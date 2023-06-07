@@ -57,5 +57,6 @@ module.exports = gql`
         acheterCashUpgrade(name: String!): Palier
         acheterAngelUpgrade(name: String!): Palier
         resetWorld: World
+        testCalcScore: String
     }
 `;
