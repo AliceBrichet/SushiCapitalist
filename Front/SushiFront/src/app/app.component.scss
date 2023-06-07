@@ -1,0 +1,11 @@
+.background {
+    background-image: url("../assets/restaurant80.jpg");
+}
+
+app-product {
+    background-color: hsla(0, 0%, 100%, 0.75);
+}
+
+app-product:hover {
+    background-color: hsla(0, 0%, 100%, 1);
+  }

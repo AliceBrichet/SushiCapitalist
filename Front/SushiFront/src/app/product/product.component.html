@@ -1,0 +1,17 @@
+<article (click)="startFabrication()">
+  <p class="title" id="productname">{{ product.name }}</p>
+  <p class="subtitle has-text-danger">マキ</p>
+  <div>
+    <figure class="product image is-96x96">
+      <img class="is-rounded" [attr.src]="server + product.logo" />
+    </figure>
+    <figure class="frame image is-128x128">
+      <img src="../../assets/frame.png" />
+    </figure>
+  </div>
+  <progress
+    class="progress is-danger is-large"
+    value="{{ progressBar }}"
+    max="100"
+  ></progress>
+</article>
