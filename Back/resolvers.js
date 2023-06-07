@@ -4,9 +4,9 @@ const fs = require('fs')
 
 function saveWorld(context) {
     var fs = require('fs')
-    fs.writeFile("userworlds/" + context.user + "-world.json",
     context.world.lastupdate = Date.now(),
     calcScore(context),
+    fs.writeFile("userworlds/" + context.user + "-world.json",
     JSON.stringify(context.world), err => {
         if (err) {
             console.error(err)
