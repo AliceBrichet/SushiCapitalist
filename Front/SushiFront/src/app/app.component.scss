@@ -13,8 +13,30 @@ app-product:hover {
 .menu {
     flex-direction: column-reverse;
     display: flex;
+    padding-top: 30px;
 }
 
 .logo {
     position: relative;
 }
+
+.hero-body {
+    padding: 1.5em;
+}
+
+.tile {
+    margin: 20px;
+}
+
+.modal {
+    position: fixed; 
+    z-index: 2; 
+    width: 800px; 
+    height: 800px; 
+    overflow: auto; 
+    background-color: white; 
+    border: solid;
+    top:10; 
+    left:20%; 
+   }
+   

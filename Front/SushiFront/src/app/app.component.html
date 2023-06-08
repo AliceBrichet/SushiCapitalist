@@ -18,17 +18,17 @@
         </div>
       </section>
       <div class="main columns">
-        <div class="hero is-danger is-fullheight">
+        <div class="hero column is-1 is-danger is-fullheight">
           <div class="hero-head">
             <div class="columns menu is-multiline">
               <div class="column">
-                <button class="button is-danger">Normal</button>
+                <button (click)="showManagers()" class="button is-danger">Unlocks</button>
               </div>
               <div class="column">
-                <button class="button is-danger">Normal</button>
+                <button class="button is-danger">Upgrades</button>
               </div>
               <div class="column">
-                <button class="button is-danger">Normal</button>
+                <button class="button is-danger">Managers</button>
               </div>
             </div>
           </div>
@@ -73,45 +73,32 @@
             </div>
           </div>
         </div>
+      <div *ngIf="showManagers()" class="modal">
+          <div>
+            <h1 class="title">Managers make you feel better !</h1>
+          </div>
+          <div>
+            <div *ngFor="let manager of world.managers">
+              <div *ngIf="!manager.unlocked" class="managerslayout">
+                <div>
+                  <div class="logo">
+                    <img class="round" [attr.src]="server+manager.logo" /> 
+                  </div>
+                </div>
+                <div>
+                  <div class="managername"> {{ manager.name}} </div>
+                  <div class="managercible"> {{ world.products[manager.idcible].name }} </div>
+                  <div class="managercost"> {{ manager.seuil}} </div>
+                </div>
+                <div>
+                  <!--<div class="hirebutton" (click)="hireManager(manager)"[ngClass]="{'selectable' : (world.money >= manager.seuil)}">Hire !</div>-->
+                </div>
+              </div>
+            </div>
+            <!--<button class="closebutton" mat-raisedbutton color="primary" (click)="showManagers = !showManagers">Close</button>-->
+          </div>
+        </div>
       </div>
     </div>
   </div>
 </body>
-<!--       <div class="tile is-parent">
-        <div class="tile is-vertical">
-          <article class="tile is-child box">
-            <p class="title">Sashimi</p>
-            <p class="subtitle has-text-danger">刺身</p>
-          </article>
-          <article class="tile is-child box">
-            <p class="title">Maki</p>
-            <p class="subtitle has-text-danger">マキ</p>
-          </article>
-      <div class="tile is-parent">
-        <div class="tile is-vertical">
-          <article class="tile is-child box">
-            <p class="title">Sushi</p>
-            <p class="subtitle has-text-danger">寿司</p>
-          </article>
-          <article class="tile is-child box">
-            <p class="title">Soupe Miso</p>
-            <p class="subtitle has-text-danger">みそ汁</p>
-          </article>
-        </div>
-      </div>
-      <div class="tile is-parent">
-        <div class="tile is-vertical">
-          <article class="tile is-child box">
-            <p class="title">Chirashi</p>
-            <p class="subtitle has-text-danger">ちらし</p>
-          </article>
-          <article class="tile is-child box">
-            <p class="title">Plateau bateau</p>
-            <p class="subtitle has-text-danger">寿司盛り合わせ</p>
-          </article>
-        </div>
-      </div>
-    </div>
-  </div>
-</div> 
- -->
