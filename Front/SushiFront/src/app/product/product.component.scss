@@ -1,7 +1,8 @@
 .product {
     position : absolute;
     margin-left: 35px;
-    margin-top: 40px;
+    margin-top: -140px;
+    transition: transform .5s ease;
 }
 
 .frame {
@@ -11,4 +12,11 @@
 .circle {
     height: 180px;
     width: 180px;
+}
+
+article:hover
+{
+    .product{
+        transform: scale(2);
+    }
 }
