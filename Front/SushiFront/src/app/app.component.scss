@@ -9,3 +9,12 @@ app-product {
 app-product:hover {
     background-color: hsla(0, 0%, 100%, 1);
   }
+
+.menu {
+    flex-direction: column-reverse;
+    display: flex;
+}
+
+.logo {
+    position: relative;
+}

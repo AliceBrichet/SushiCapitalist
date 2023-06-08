@@ -14,7 +14,8 @@ import { AppComponent } from '../app.component';
 })
 export class ProductComponent implements OnInit {
   product: Product = new Product();
-  server = 'https://isiscapitalistgraphql.kk.kurasawa.fr/';
+  server = WebserviceService.server;
+  serverImage = WebserviceService.serverImage;
   orientation = Orientation.horizontal;
   progressBar = 0;
   @Input()

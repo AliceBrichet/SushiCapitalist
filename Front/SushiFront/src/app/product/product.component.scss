@@ -1,7 +1,14 @@
 .product {
-    position : absolute
+    position : absolute;
+    margin-left: 35px;
+    margin-top: 40px;
 }
 
 .frame {
     position: relative;
+}
+
+.circle {
+    height: 180px;
+    width: 180px;
 }

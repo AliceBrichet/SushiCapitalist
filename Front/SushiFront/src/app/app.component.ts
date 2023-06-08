@@ -12,7 +12,8 @@ const testphrase = 'coucou';
 export class AppComponent {
   title = 'SushiFront';
   world: World = new World();
-  server = 'https://isiscapitalistgraphql.kk.kurasawa.fr/';
+  server = WebserviceService.server;
+  serverImage = WebserviceService.serverImage;
   testphrase = testphrase;
   constructor(private service: WebserviceService) {
     service.getWorld().then((world) => {
