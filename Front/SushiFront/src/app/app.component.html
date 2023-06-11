@@ -22,13 +22,13 @@
           <div class="hero-head">
             <div class="columns menu is-multiline">
               <div class="column">
-                <button (click)="showManagers()" class="button is-danger">Unlocks</button>
+                <button class="button is-danger">Unlocks</button>
               </div>
               <div class="column">
                 <button class="button is-danger">Upgrades</button>
               </div>
               <div class="column">
-                <button class="button is-danger">Managers</button>
+                <button (click)="showManagers(true)" class="button is-danger">Managers</button>
               </div>
             </div>
           </div>
@@ -73,29 +73,36 @@
             </div>
           </div>
         </div>
-      <div *ngIf="showManagers()" class="modal">
-          <div>
-            <h1 class="title">Managers make you feel better !</h1>
-          </div>
-          <div>
-            <div *ngFor="let manager of world.managers">
-              <div *ngIf="!manager.unlocked" class="managerslayout">
-                <div>
-                  <div class="logo">
-                    <img class="round" [attr.src]="server+manager.logo" /> 
+        <div class="modal" id="managers">
+          <div class="modal-background"></div>
+          <div class="modal-card">
+            <header class="modal-card-head has-background-warning-light">
+              <p class="modal-card-title is-size-3">Managers</p>
+              <button (click)="showManagers(false)" class="delete" aria-label="close"></button>
+            </header>
+            <section class="modal-card-body backgroundModal">
+              <div class="tile is-vertical">
+                <div *ngFor="let manager of world.managers">
+                  <div *ngIf="!manager.unlocked" class="managerslayout">
+                    <div class="tile is-parent">
+                      <article class="tile columns is-child notification is-success">
+                        <figure class="product dot is-3 has-background-warning-light image is-96x96">
+                          <img [attr.src]="serverImage + manager.logo" />
+                        </figure>
+                        <div class="column is-8">
+                          <div class="is-center title is-3 monospace"> {{ manager.name}} </div>
+                          <div class="is-center title is-5 monospace"> Prépare les {{ world.products[manager.idcible].name }} ! </div>
+                          <div class="managercost"> {{ manager.seuil}} </div>
+                        </div>
+                      </article>
+                    </div>
                   </div>
                 </div>
-                <div>
-                  <div class="managername"> {{ manager.name}} </div>
-                  <div class="managercible"> {{ world.products[manager.idcible].name }} </div>
-                  <div class="managercost"> {{ manager.seuil}} </div>
-                </div>
-                <div>
-                  <!--<div class="hirebutton" (click)="hireManager(manager)"[ngClass]="{'selectable' : (world.money >= manager.seuil)}">Hire !</div>-->
-                </div>
               </div>
-            </div>
-            <!--<button class="closebutton" mat-raisedbutton color="primary" (click)="showManagers = !showManagers">Close</button>-->
+              <div>
+                <!--<div class="hirebutton" (click)="hireManager(manager)"[ngClass]="{'selectable' : (world.money >= manager.seuil)}">Hire !</div>-->
+              </div>
+            </section>
           </div>
         </div>
       </div>

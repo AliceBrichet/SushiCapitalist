@@ -19,7 +19,14 @@ export class AppComponent {
     });
   }
 
-  showManagers() {
-    
+  showManagers(state: boolean) {
+    let el = document.getElementById("managers");
+    if(state) {
+      el?.classList.add('is-active');
+    }
+    else {
+      el?.classList.remove('is-active');
+    }
   }
+    
 }

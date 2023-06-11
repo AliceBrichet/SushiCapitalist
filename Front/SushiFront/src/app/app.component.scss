@@ -2,6 +2,10 @@
     background-image: url("../assets/restaurant80.jpg");
 }
 
+.backgroundModal {
+    background-image: url("../assets/fullOnigiri.png");
+}
+
 app-product {
     background-color: hsla(0, 0%, 100%, 0.75);
 }
@@ -28,15 +32,39 @@ app-product:hover {
     margin: 20px;
 }
 
+.dot {
+    height: 150px;
+    width: 150px;
+    border-radius: 50%;
+    display: inline-block;
+}
+
+.is-center {
+    text-align: center;
+}
+
 .modal {
-    position: fixed; 
-    z-index: 2; 
-    width: 800px; 
-    height: 800px; 
-    overflow: auto; 
-    background-color: white; 
-    border: solid;
-    top:10; 
-    left:20%; 
-   }
+    -webkit-animation-name: slideIn;
+    -webkit-animation-duration: 0.4s;
+    animation-name: slideIn;
+    animation-duration: 0.4s;
+
+}
+
+//Functions
+
+@keyframes slideIn {
+    from {bottom: -300px; opacity: 0}
+    to {bottom: 0; opacity: 1}
+}
+
+@-webkit-keyframes fadeIn {
+    from {opacity: 0} 
+    to {opacity: 1}
+}
+
+@keyframes fadeIn {
+    from {opacity: 0} 
+    to {opacity: 1}
+}
    
