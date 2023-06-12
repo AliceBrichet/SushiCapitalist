@@ -1,17 +1,43 @@
-<article (click)="startFabrication()">
-  <p class="title" id="productname">{{ product.name }}</p>
-  <p class="subtitle has-text-danger">マキ</p>
-  <div>
-    <figure class="frame image circle">
-      <img src="../../assets/frame.png" />
-    </figure>
-    <figure class="product image is-96x96">
-      <img [attr.src]="serverImage + product.logo" />
-    </figure>
-  </div>
-  <progress
+<div *ngIf="product">
+  <article>
+    <p class="title" id="productname">{{ product.name }}</p>
+    <p class="subtitle has-text-danger">マキ</p>
+    <div class="columns">
+      <div class="column">
+        <div>{{ worldMoney }}</div>
+        <figure class="frame image circle">
+          <img src="../../assets/frame.png" />
+        </figure>
+        <figure class="product image is-96x96" (click)="startFabrication()">
+          <img [attr.src]="serverImage + product.logo" />
+        </figure>
+      </div>
+      <div class="column">
+        <button class="button-55" role="button">
+          You {{ can }} buy {{ qtmulti }}
+        </button>
+      </div>
+    </div>
+    <div>
+      <app-my-progress-bar
+        class="progress is-danger is-large"
+        [run]="run"
+        [auto]="product.managerUnlocked"
+        frontcolor="#F14668"
+        backcolor="#DEDEDE"
+        [orientation]="orientation"
+        [vitesse]="product.vitesse"
+        [initialValue]="0"
+      >
+      </app-my-progress-bar>
+    </div>
+  </article>
+</div>
+
+<!--
+<progress
     class="progress is-danger is-large"
-    value="{{ progressBar }}"
+    value="{{ progress }}"
     max="100"
   ></progress>
-</article>
+-->

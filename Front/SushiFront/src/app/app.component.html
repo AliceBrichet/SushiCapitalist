@@ -1,10 +1,10 @@
 <body>
-  <div class="hero is-fullheight background">
+  <div class="hero is-fullheight background" *ngIf="world">
     <div class="hero-head">
       <section class="hero is-danger">
         <div class="columns is-vcentered">
           <div class="hero-body column is-two-thirds">
-            <figure class="product image is-96x96">
+            <figure class="product image is-128x128">
               <img class="is-square" [attr.src]="serverImage + world.logo" />
             </figure>
             <span id="worldname" class="title"> {{ world.name }} </span>
@@ -13,14 +13,22 @@
             argent
             <span [innerHTML]="world.money | bigvalue"> </span>
           </div>
-          <div class="column">multiplicateur</div>
+          <div class="column">
+            <button
+              id="multiplicateur"
+              class="button-55"
+              (click)="changeCommutateur()"
+            >
+              {{ qtmulti }}
+            </button>
+          </div>
           <div class="column">ID du joueur</div>
         </div>
       </section>
       <div class="main columns">
         <div class="hero column is-1 is-danger is-fullheight">
           <div class="hero-head">
-            <div class="columns menu is-multiline">
+            <div class="columns is-multiline">
               <div class="column">
                 <button class="button is-danger">Unlocks</button>
               </div>
@@ -28,22 +36,28 @@
                 <button class="button is-danger">Upgrades</button>
               </div>
               <div class="column">
-                <button (click)="showManagers(true)" class="button is-danger">Managers</button>
+                <button (click)="showManagers(true)" class="button is-danger">
+                  Managers
+                </button>
               </div>
             </div>
           </div>
         </div>
-        <div class="product column is-vcentered">
+        <div class="product column">
           <div class="tile is-ancestor has-text-centered">
             <div class="tile is-parent">
               <div class="tile is-vertical">
                 <app-product
+                  [qtmulti]="qtmulti"
+                  [money]="world.money"
                   class="tile is-child box"
                   [prod]="world.products[0]"
+                  (notifyProduction)="onProductionDone($event)"
                 ></app-product>
                 <app-product
                   class="tile is-child box"
                   [prod]="world.products[3]"
+                  (notifyProduction)="onProductionDone($event)"
                 ></app-product>
               </div>
             </div>
@@ -52,10 +66,12 @@
                 <app-product
                   class="tile is-child box"
                   [prod]="world.products[1]"
+                  (notifyProduction)="onProductionDone($event)"
                 ></app-product>
                 <app-product
                   class="tile is-child box"
                   [prod]="world.products[4]"
+                  (notifyProduction)="onProductionDone($event)"
                 ></app-product>
               </div>
             </div>
@@ -64,10 +80,12 @@
                 <app-product
                   class="tile is-child box"
                   [prod]="world.products[2]"
+                  (notifyProduction)="onProductionDone($event)"
                 ></app-product>
                 <app-product
                   class="tile is-child box"
                   [prod]="world.products[5]"
+                  (notifyProduction)="onProductionDone($event)"
                 ></app-product>
               </div>
             </div>
@@ -78,21 +96,37 @@
           <div class="modal-card">
             <header class="modal-card-head has-background-warning-light">
               <p class="modal-card-title is-size-3">Managers</p>
-              <button (click)="showManagers(false)" class="delete" aria-label="close"></button>
+              <button
+                (click)="showManagers(false)"
+                class="delete"
+                aria-label="close"
+              ></button>
             </header>
             <section class="modal-card-body backgroundModal">
               <div class="tile is-vertical">
                 <div *ngFor="let manager of world.managers">
                   <div *ngIf="!manager.unlocked" class="managerslayout">
                     <div class="tile is-parent">
-                      <article class="tile columns is-child notification is-success">
-                        <figure class="product dot is-3 has-background-warning-light image is-96x96">
+                      <article
+                        class="tile columns is-child notification is-success"
+                      >
+                        <figure
+                          class="product dot is-3 has-background-warning-light image is-96x96"
+                        >
                           <img [attr.src]="serverImage + manager.logo" />
                         </figure>
                         <div class="column is-8">
-                          <div class="is-center title is-3 monospace"> {{ manager.name}} </div>
-                          <div class="is-center title is-5 monospace"> Prépare les {{ world.products[manager.idcible].name }} ! </div>
-                          <div class="managercost"> {{ manager.seuil}} </div>
+                          <div class="is-center title is-3 monospace">
+                            {{ manager.name }}
+                          </div>
+                          <div
+                            class="is-center title is-5 monospace"
+                            *ngIf="manager"
+                          >
+                            Prépare les
+                            {{ world.products[manager.idcible - 1].name }}
+                          </div>
+                          <div class="managercost">{{ manager.seuil }}</div>
                         </div>
                       </article>
                     </div>
@@ -100,7 +134,7 @@
                 </div>
               </div>
               <div>
-                <!--<div class="hirebutton" (click)="hireManager(manager)"[ngClass]="{'selectable' : (world.money >= manager.seuil)}">Hire !</div>-->
+                <!-- <div class="hirebutton" (click)="hireManager(manager)"[ngClass]="{'selectable' : (world.money >= manager.seuil)}">Hire !</div>-->
               </div>
             </section>
           </div>

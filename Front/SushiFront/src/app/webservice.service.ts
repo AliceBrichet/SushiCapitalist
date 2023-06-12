@@ -7,11 +7,8 @@ import { GET_WORLD } from './Graphrequests';
 })
 export class WebserviceService {
   static getWorld: any;
-  //constructor() {}
-  //server = 'https://studio.apollographql.com/sandbox/explorer';
   static server = 'http://localhost:4000/graphql/';
   static serverImage = 'http://localhost:4000/';
-  //'http://localhost:4000/';
   user = '';
 
   createClient() {

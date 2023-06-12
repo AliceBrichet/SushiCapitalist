@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { Product } from '../world';
 import { WebserviceService } from '../webservice.service';
 import {
@@ -6,6 +6,7 @@ import {
   Orientation,
 } from '../my-progress-bar/my-progress-bar.component';
 import { AppComponent } from '../app.component';
+import { BigvaluePipe } from '../bigvalue.pipe';
 
 @Component({
   selector: 'app-product',
@@ -13,33 +14,83 @@ import { AppComponent } from '../app.component';
   styleUrls: ['./product.component.scss'],
 })
 export class ProductComponent implements OnInit {
-  product: Product = new Product();
   server = WebserviceService.server;
   serverImage = WebserviceService.serverImage;
   orientation = Orientation.horizontal;
-  progressBar = 0;
+  run = false;
+  maxQuantity = 0;
+  worldMoney = 0;
+  worldQtmulti = '';
+  productQtmulti = 1;
+  can = 'can';
+  product: Product = new Product();
+  multiplicateur = 0;
   @Input()
   set prod(value: Product) {
     this.product = value;
   }
+  _qtmulti!: string;
+  @Input() set qtmulti(value: string) {
+    this.worldQtmulti = value;
+    if (this.qtmulti && this.product) this.calcMaxCanBuy();
+  }
+  _money!: number;
+  @Input() set money(value: number) {
+    this.worldMoney = value;
+  }
+  @Output() notifyProduction: EventEmitter<Product> =
+    new EventEmitter<Product>();
+
   startFabrication() {
-    if (this.product.quantite == 0) {
+    if (this.product.quantite >= 0) {
       this.product.timeleft = this.product.vitesse;
+      console.log(this.product);
       this.product.lastupdate = Date.now();
+      this.run = true;
     }
   }
+
   ngOnInit() {
     setInterval(() => {
       this.calcScore();
     }, 100);
   }
 
-  calcProgress() {
-    const timePassed = Date.now() - this.product.lastupdate;
-    this.progressBar =
-      ((this.product.vitesse - this.product.timeleft) / this.product.vitesse) *
-      100;
+  calcScore() {
+    if (!this.product) return;
+    const currentTime = Date.now();
+    const elapsedTime = currentTime - this.product.lastupdate;
+    if (this.product.timeleft != 0) {
+      if (elapsedTime >= this.product.timeleft) {
+        this.product.quantite += 1;
+        this.product.timeleft = 0;
+        this.run = false;
+        this.notifyProduction.emit(this.product);
+        // ne gère pas encore le calc pour manager unlock
+      } else {
+        this.product.timeleft = this.product.timeleft - elapsedTime;
+        this.product.lastupdate = currentTime;
+      }
+    }
   }
-  // eslint-disable-next-line @typescript-eslint/no-empty-function
-  calcScore() {}
+  calcMaxCanBuy() {
+    let remainingMoney = this.worldMoney;
+    this.maxQuantity = 0;
+    while (remainingMoney >= this.product.cout) {
+      this.maxQuantity++;
+      remainingMoney -= this.product.cout;
+      this.product.cout *= this.product.croissance;
+    }
+    return this.maxQuantity;
+  }
+
+  calcBuyX() {
+    if (!this.product) return;
+    let multiplicateur = parseInt(this.qtmulti);
+    console.log(multiplicateur);
+    if (this.qtmulti === 'Max') {
+      this.multiplicateur = this.calcMaxCanBuy();
+      this.can = 'can';
+    }
+  }
 }
