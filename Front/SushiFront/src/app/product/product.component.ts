@@ -53,6 +53,7 @@ export class ProductComponent implements OnInit {
   ngOnInit() {
     setInterval(() => {
       this.calcScore();
+      this.calcBuyX();
     }, 100);
   }
 
@@ -86,11 +87,19 @@ export class ProductComponent implements OnInit {
 
   calcBuyX() {
     if (!this.product) return;
-    let multiplicateur = parseInt(this.qtmulti);
+    const multiplicateur = parseInt(this.qtmulti, 10);
     console.log(multiplicateur);
     if (this.qtmulti === 'Max') {
       this.multiplicateur = this.calcMaxCanBuy();
       this.can = 'can';
+    }
+    if (this.qtmulti === 'x 1') {
+      if (
+        this.worldMoney >=
+        this.product.cout * (this.product.croissance ^ multiplicateur)
+      ) {
+        this.can = "can't";
+      }
     }
   }
 }
