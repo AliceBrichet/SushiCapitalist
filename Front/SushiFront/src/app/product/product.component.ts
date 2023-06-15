@@ -19,12 +19,13 @@ export class ProductComponent implements OnInit {
   orientation = Orientation.horizontal;
   run = false;
   maxQuantity = 0;
+  coutNProduct = 0;
   worldMoney = 0;
   worldQtmulti = '';
-  productQtmulti = 1;
   can = 'can';
   product: Product = new Product();
   multiplicateur = 0;
+  buttonBuy = '';
   @Input()
   set prod(value: Product) {
     this.product = value;
@@ -41,8 +42,10 @@ export class ProductComponent implements OnInit {
   @Output() notifyProduction: EventEmitter<Product> =
     new EventEmitter<Product>();
 
+  @Output() notifyPurchase: EventEmitter<number> = new EventEmitter<number>();
+
   startFabrication() {
-    if (this.product.quantite >= 0) {
+    if (this.product.quantite > 0) {
       this.product.timeleft = this.product.vitesse;
       console.log(this.product);
       this.product.lastupdate = Date.now();
@@ -53,7 +56,7 @@ export class ProductComponent implements OnInit {
   ngOnInit() {
     setInterval(() => {
       this.calcScore();
-      this.calcBuyX();
+      this.calcCoutN();
     }, 100);
   }
 
@@ -75,31 +78,44 @@ export class ProductComponent implements OnInit {
     }
   }
   calcMaxCanBuy() {
-    let remainingMoney = this.worldMoney;
-    this.maxQuantity = 0;
-    while (remainingMoney >= this.product.cout) {
-      this.maxQuantity++;
-      remainingMoney -= this.product.cout;
-      this.product.cout *= this.product.croissance;
-    }
-    return this.maxQuantity;
+    const maxQuantity = Math.floor(
+      Math.log(
+        (-this.worldMoney / this.product.cout) * (1 - this.product.croissance) +
+          1
+      ) / Math.log(this.product.croissance)
+    );
+    return maxQuantity;
   }
 
-  calcBuyX() {
-    if (!this.product) return;
-    const multiplicateur = parseInt(this.qtmulti, 10);
-    console.log(multiplicateur);
-    if (this.qtmulti === 'Max') {
+  calcCoutN() {
+    if (this.worldQtmulti != 'Max') {
+      this.coutNProduct = 0;
+      this.multiplicateur = parseInt(this.worldQtmulti);
+    } else {
       this.multiplicateur = this.calcMaxCanBuy();
       this.can = 'can';
+      //cout ok sauf pour max ...
     }
-    if (this.qtmulti === 'x 1') {
-      if (
-        this.worldMoney >=
-        this.product.cout * (this.product.croissance ^ multiplicateur)
-      ) {
-        this.can = "can't";
-      }
-    }
+    this.coutNProduct =
+      (this.product.cout *
+        (1 - Math.pow(this.product.croissance, this.multiplicateur))) /
+      (1 - this.product.croissance);
+    if (this.coutNProduct <= this.worldMoney) this.can = 'can';
+    else this.can = "can't";
+    if (this.can == "can't") {
+      this.buttonBuy = 'disabled';
+    } else this.buttonBuy = '';
+  }
+
+  buyProduct() {
+    this.product.quantite += this.multiplicateur;
+    this.product.cout =
+      this.product.cout *
+      Math.pow(this.product.croissance, this.multiplicateur);
+    this.notifyPurchase.emit(this.coutNProduct);
   }
 }
+
+/* this.coutNProduct =
+        this.product.cout *
+        Math.pow(this.product.croissance, this.multiplicateur); */

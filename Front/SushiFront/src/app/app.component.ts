@@ -16,7 +16,7 @@ export class AppComponent {
   world: World = new World();
   server = WebserviceService.server;
   serverImage = WebserviceService.serverImage;
-  qtmulti = 'x 1';
+  qtmulti = '1';
   constructor(private service: WebserviceService) {
     service.getWorld().then((world) => {
       this.world = world.data.getWorld;
@@ -33,26 +33,29 @@ export class AppComponent {
   }
 
   onProductionDone(p: Product) {
-    console.log(p);
     this.world.money += p.revenu;
+  }
+
+  onPurchaseDone(cout: number) {
+    console.log(cout);
+    this.world.money -= cout;
   }
 
   changeCommutateur() {
     switch (this.qtmulti) {
       default:
-      case 'x 1':
-        this.qtmulti = 'x 10';
+      case '1':
+        this.qtmulti = '10';
         break;
-      case 'x 10':
-        this.qtmulti = 'x 100';
+      case '10':
+        this.qtmulti = '100';
         break;
-      case 'x 100':
+      case '100':
         this.qtmulti = 'Max';
         break;
       case 'Max':
-        this.qtmulti = 'x 1';
+        this.qtmulti = '1';
         break;
     }
-    console.log(this.qtmulti);
   }
 }

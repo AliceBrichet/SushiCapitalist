@@ -1,5 +1,5 @@
 <div *ngIf="product">
-  <article>
+  <article [ngClass]="{ locked: product.quantite < 1 }">
     <p class="title" id="productname">{{ product.name }}</p>
     <p class="subtitle has-text-danger">マキ</p>
     <div class="columns">
@@ -13,8 +13,13 @@
         </figure>
       </div>
       <div class="column">
-        <button class="button-55" role="button">
-          You {{ can }} buy {{ multiplicateur }}
+        <button
+          class="button-55 {{ buttonBuy }}"
+          role="button"
+          (click)="buyProduct()"
+        >
+          You {{ can }} buy {{ multiplicateur }} because it costs
+          {{ coutNProduct }}
         </button>
       </div>
     </div>

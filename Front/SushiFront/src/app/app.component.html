@@ -53,39 +53,55 @@
                   class="tile is-child box"
                   [prod]="world.products[0]"
                   (notifyProduction)="onProductionDone($event)"
+                  (notifyPurchase)="onPurchaseDone($event)"
                 ></app-product>
                 <app-product
+                  [qtmulti]="qtmulti"
+                  [money]="world.money"
                   class="tile is-child box"
                   [prod]="world.products[3]"
                   (notifyProduction)="onProductionDone($event)"
+                  (notifyPurchase)="onPurchaseDone($event)"
                 ></app-product>
               </div>
             </div>
             <div class="tile is-parent">
               <div class="tile is-vertical">
                 <app-product
+                  [qtmulti]="qtmulti"
+                  [money]="world.money"
                   class="tile is-child box"
                   [prod]="world.products[1]"
                   (notifyProduction)="onProductionDone($event)"
+                  (notifyPurchase)="onPurchaseDone($event)"
                 ></app-product>
                 <app-product
+                  [qtmulti]="qtmulti"
+                  [money]="world.money"
                   class="tile is-child box"
                   [prod]="world.products[4]"
                   (notifyProduction)="onProductionDone($event)"
+                  (notifyPurchase)="onPurchaseDone($event)"
                 ></app-product>
               </div>
             </div>
             <div class="tile is-parent">
               <div class="tile is-vertical">
                 <app-product
+                  [qtmulti]="qtmulti"
+                  [money]="world.money"
                   class="tile is-child box"
                   [prod]="world.products[2]"
                   (notifyProduction)="onProductionDone($event)"
+                  (notifyPurchase)="onPurchaseDone($event)"
                 ></app-product>
                 <app-product
+                  [qtmulti]="qtmulti"
+                  [money]="world.money"
                   class="tile is-child box"
                   [prod]="world.products[5]"
                   (notifyProduction)="onProductionDone($event)"
+                  (notifyPurchase)="onPurchaseDone($event)"
                 ></app-product>
               </div>
             </div>

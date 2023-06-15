@@ -70,3 +70,15 @@ article:active {
   .button-55:focus {
     box-shadow: rgba(0, 0, 0, .3) 2px 8px 4px -6px;
   }
+
+  .disabled {
+    background-color: #eae8e5;
+    pointer-events: none;
+
+  }
+
+  .locked {
+    .image {
+      pointer-events: none;
+    }
+  }
