@@ -2,6 +2,7 @@
     font-family: Osake-sushi;
     src: url(../assets/Osake-x3oqj.otf);
   }
+@import url(button.scss);
 
 .background {
     background-image: url("../assets/restaurant80.jpg");
@@ -18,6 +19,10 @@ app-product {
 app-product:hover {
     background-color: hsla(0, 0%, 100%, 1);
   }
+
+hr {
+    margin: 0.5em;
+}
 
 .menu {
     flex-direction: column-reverse;
@@ -37,15 +42,35 @@ app-product:hover {
     margin: 20px;
 }
 
-.dot {
+.dotManager {
     height: 150px;
     width: 150px;
     border-radius: 50%;
     display: inline-block;
 }
 
+.dot {
+    height: 150px;
+    width: 150px;
+    padding: 20px;
+    border-radius: 50%;
+    display: inline-block;
+}
+
 .is-center {
     text-align: center;
+}
+
+.is-light {
+    font-weight: 500;
+}
+
+.title {
+    letter-spacing: 2px;
+}
+
+.manager-title {
+    margin-bottom: 0.1em;
 }
 
 .modal {

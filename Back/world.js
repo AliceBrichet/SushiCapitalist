@@ -9,7 +9,7 @@ module.exports = {
     "lastupdate": 0,
     "products": [
         {
-            "id": 1,
+            "id": 0,
             "name": "Sashimi",
             "logo": "icones/sashimi.png",
             "cout": 4,
@@ -24,7 +24,7 @@ module.exports = {
                     "name": "25 Sashimi !",
                     "logo": "icones/sashimi.png",
                     "seuil": 25,
-                    "idcible": 1,
+                    "idcible": 0,
                     "ratio": 2,
                     "typeratio": "gains",
                     "unlocked": false
@@ -33,16 +33,16 @@ module.exports = {
                     "name": "50 Sashimi !",
                     "logo": "icones/sashimi.png",
                     "seuil": 50,
-                    "idcible": 1,
+                    "idcible": 0,
                     "ratio": 2,
                     "typeratio": "gains",
                     "unlocked": false
                 },
                 {
-                    "name": "100 Sashimi !",
+                    "name": "000 Sashimi !",
                     "logo": "icones/sashimi.png",
                     "seuil": 100,
-                    "idcible": 1,
+                    "idcible": 0,
                     "ratio": 2,
                     "typeratio": "gains",
                     "unlocked": false
@@ -51,7 +51,7 @@ module.exports = {
                     "name": "200 Sashimi !",
                     "logo": "icones/sashimi.png",
                     "seuil": 200,
-                    "idcible": 1,
+                    "idcible": 0,
                     "ratio": 2,
                     "typeratio": "gains",
                     "unlocked": false
@@ -60,7 +60,7 @@ module.exports = {
                     "name": "300 Sashimi !",
                     "logo": "icones/sashimi.png",
                     "seuil": 300,
-                    "idcible": 1,
+                    "idcible": 0,
                     "ratio": 2,
                     "typeratio": "gains",
                     "unlocked": false
@@ -69,7 +69,7 @@ module.exports = {
                     "name": "400 Sashimi !",
                     "logo": "icones/sashimi.png",
                     "seuil": 400,
-                    "idcible": 1,
+                    "idcible": 0,
                     "ratio": 2,
                     "typeratio": "gains",
                     "unlocked": false
@@ -78,7 +78,7 @@ module.exports = {
                     "name": "500 Sashimi !",
                     "logo": "icones/sashimi.png",
                     "seuil": 500,
-                    "idcible": 1,
+                    "idcible": 0,
                     "ratio": 4,
                     "typeratio": "gains",
                     "unlocked": false
@@ -87,7 +87,7 @@ module.exports = {
                     "name": "600 Sashimi !",
                     "logo": "icones/sashimi.png",
                     "seuil": 600,
-                    "idcible": 1,
+                    "idcible": 0,
                     "ratio": 4,
                     "typeratio": "gains",
                     "unlocked": false
@@ -96,7 +96,7 @@ module.exports = {
                     "name": "700 Sashimi !",
                     "logo": "icones/sashimi.png",
                     "seuil": 700,
-                    "idcible": 1,
+                    "idcible": 0,
                     "ratio": 4,
                     "typeratio": "gains",
                     "unlocked": false
@@ -105,7 +105,7 @@ module.exports = {
                     "name": "800 Sashimi !",
                     "logo": "icones/sashimi.png",
                     "seuil": 800,
-                    "idcible": 1,
+                    "idcible": 0,
                     "ratio": 4,
                     "typeratio": "gains",
                     "unlocked": false
@@ -114,7 +114,7 @@ module.exports = {
                     "name": "900 Sashimi !",
                     "logo": "icones/sashimi.png",
                     "seuil": 900,
-                    "idcible": 1,
+                    "idcible": 0,
                     "ratio": 4,
                     "typeratio": "gains",
                     "unlocked": false
@@ -123,7 +123,7 @@ module.exports = {
                     "name": "1000 Sashimi !",
                     "logo": "icones/sashimi.png",
                     "seuil": 1000,
-                    "idcible": 1,
+                    "idcible": 0,
                     "ratio": 5,
                     "typeratio": "gains",
                     "unlocked": false
@@ -132,7 +132,7 @@ module.exports = {
                     "name": "1100 Sashimi !",
                     "logo": "icones/sashimi.png",
                     "seuil": 1100,
-                    "idcible": 1,
+                    "idcible": 0,
                     "ratio": 4,
                     "typeratio": "gains",
                     "unlocked": false
@@ -141,7 +141,7 @@ module.exports = {
                     "name": "1200 Sashimi !",
                     "logo": "icones/sashimi.png",
                     "seuil": 1200,
-                    "idcible": 1,
+                    "idcible": 0,
                     "ratio": 4,
                     "typeratio": "gains",
                     "unlocked": false
@@ -150,7 +150,7 @@ module.exports = {
                     "name": "1300 Sashimi !",
                     "logo": "icones/sashimi.png",
                     "seuil": 1300,
-                    "idcible": 1,
+                    "idcible": 0,
                     "ratio": 4,
                     "typeratio": "gains",
                     "unlocked": false
@@ -159,7 +159,7 @@ module.exports = {
                     "name": "1400 Sashimi !",
                     "logo": "icones/sashimi.png",
                     "seuil": 1400,
-                    "idcible": 1,
+                    "idcible": 0,
                     "ratio": 4,
                     "typeratio": "gains",
                     "unlocked": false
@@ -168,7 +168,7 @@ module.exports = {
                     "name": "1500 Sashimi !",
                     "logo": "icones/sashimi.png",
                     "seuil": 1500,
-                    "idcible": 1,
+                    "idcible": 0,
                     "ratio": 4,
                     "typeratio": "gains",
                     "unlocked": false
@@ -177,7 +177,7 @@ module.exports = {
                     "name": "1600 Sashimi !",
                     "logo": "icones/sashimi.png",
                     "seuil": 1600,
-                    "idcible": 1,
+                    "idcible": 0,
                     "ratio": 4,
                     "typeratio": "gains",
                     "unlocked": false
@@ -186,7 +186,7 @@ module.exports = {
                     "name": "1700 Sashimi !",
                     "logo": "icones/sashimi.png",
                     "seuil": 1700,
-                    "idcible": 1,
+                    "idcible": 0,
                     "ratio": 4,
                     "typeratio": "gains",
                     "unlocked": false
@@ -195,7 +195,7 @@ module.exports = {
                     "name": "1800 Sashimi !",
                     "logo": "icones/sashimi.png",
                     "seuil": 1800,
-                    "idcible": 1,
+                    "idcible": 0,
                     "ratio": 4,
                     "typeratio": "gains",
                     "unlocked": false
@@ -204,7 +204,7 @@ module.exports = {
                     "name": "1900 Sashimi !",
                     "logo": "icones/sashimi.png",
                     "seuil": 1900,
-                    "idcible": 1,
+                    "idcible": 0,
                     "ratio": 4,
                     "typeratio": "gains",
                     "unlocked": false
@@ -213,7 +213,7 @@ module.exports = {
                     "name": "2000 Sashimi !",
                     "logo": "icones/sashimi.png",
                     "seuil": 2000,
-                    "idcible": 1,
+                    "idcible": 0,
                     "ratio": 4,
                     "typeratio": "gains",
                     "unlocked": false
@@ -221,7 +221,7 @@ module.exports = {
             ],
         },
         {
-            "id": 2,
+            "id": 1,
             "name": "Maki",
             "logo": "icones/maki.png",
             "cout": 69,
@@ -433,7 +433,7 @@ module.exports = {
             ],
         },
         {
-            "id": 3,
+            "id": 2,
             "name": "Sushi",
             "logo": "icones/sushi.png",
             "cout": 821,
@@ -448,7 +448,7 @@ module.exports = {
                     "name": "25 Sushi !",
                     "logo": "icones/sushi.png",
                     "seuil": 25,
-                    "idcible": 1,
+                    "idcible": 2,
                     "ratio": 2,
                     "typeratio": "gains",
                     "unlocked": false
@@ -457,7 +457,7 @@ module.exports = {
                     "name": "50 Sushi !",
                     "logo": "icones/sushi.png",
                     "seuil": 50,
-                    "idcible": 1,
+                    "idcible": 2,
                     "ratio": 2,
                     "typeratio": "gains",
                     "unlocked": false
@@ -466,7 +466,7 @@ module.exports = {
                     "name": "100 Sushi !",
                     "logo": "icones/sushi.png",
                     "seuil": 100,
-                    "idcible": 1,
+                    "idcible": 2,
                     "ratio": 2,
                     "typeratio": "gains",
                     "unlocked": false
@@ -475,7 +475,7 @@ module.exports = {
                     "name": "200 Sushi !",
                     "logo": "icones/sushi.png",
                     "seuil": 200,
-                    "idcible": 1,
+                    "idcible": 2,
                     "ratio": 2,
                     "typeratio": "gains",
                     "unlocked": false
@@ -484,7 +484,7 @@ module.exports = {
                     "name": "300 Sushi !",
                     "logo": "icones/sushi.png",
                     "seuil": 300,
-                    "idcible": 1,
+                    "idcible": 2,
                     "ratio": 2,
                     "typeratio": "gains",
                     "unlocked": false
@@ -493,7 +493,7 @@ module.exports = {
                     "name": "400 Sushi !",
                     "logo": "icones/sushi.png",
                     "seuil": 400,
-                    "idcible": 1,
+                    "idcible": 2,
                     "ratio": 2,
                     "typeratio": "gains",
                     "unlocked": false
@@ -502,7 +502,7 @@ module.exports = {
                     "name": "500 Sushi !",
                     "logo": "icones/sushi.png",
                     "seuil": 500,
-                    "idcible": 1,
+                    "idcible": 2,
                     "ratio": 4,
                     "typeratio": "gains",
                     "unlocked": false
@@ -511,7 +511,7 @@ module.exports = {
                     "name": "600 Sushi !",
                     "logo": "icones/sushi.png",
                     "seuil": 600,
-                    "idcible": 1,
+                    "idcible": 2,
                     "ratio": 4,
                     "typeratio": "gains",
                     "unlocked": false
@@ -520,7 +520,7 @@ module.exports = {
                     "name": "700 Sushi !",
                     "logo": "icones/sushi.png",
                     "seuil": 700,
-                    "idcible": 1,
+                    "idcible": 2,
                     "ratio": 4,
                     "typeratio": "gains",
                     "unlocked": false
@@ -529,7 +529,7 @@ module.exports = {
                     "name": "800 Sushi !",
                     "logo": "icones/sushi.png",
                     "seuil": 800,
-                    "idcible": 1,
+                    "idcible": 2,
                     "ratio": 4,
                     "typeratio": "gains",
                     "unlocked": false
@@ -538,7 +538,7 @@ module.exports = {
                     "name": "900 Sushi !",
                     "logo": "icones/sushi.png",
                     "seuil": 900,
-                    "idcible": 1,
+                    "idcible": 2,
                     "ratio": 4,
                     "typeratio": "gains",
                     "unlocked": false
@@ -547,7 +547,7 @@ module.exports = {
                     "name": "1000 Sushi !",
                     "logo": "icones/sushi.png",
                     "seuil": 1000,
-                    "idcible": 1,
+                    "idcible": 2,
                     "ratio": 5,
                     "typeratio": "gains",
                     "unlocked": false
@@ -556,7 +556,7 @@ module.exports = {
                     "name": "1100 Sushi !",
                     "logo": "icones/sushi.png",
                     "seuil": 1100,
-                    "idcible": 1,
+                    "idcible": 2,
                     "ratio": 4,
                     "typeratio": "gains",
                     "unlocked": false
@@ -565,7 +565,7 @@ module.exports = {
                     "name": "1200 Sushi !",
                     "logo": "icones/sushi.png",
                     "seuil": 1200,
-                    "idcible": 1,
+                    "idcible": 2,
                     "ratio": 4,
                     "typeratio": "gains",
                     "unlocked": false
@@ -574,7 +574,7 @@ module.exports = {
                     "name": "1300 Sushi !",
                     "logo": "icones/sushi.png",
                     "seuil": 1300,
-                    "idcible": 1,
+                    "idcible": 2,
                     "ratio": 4,
                     "typeratio": "gains",
                     "unlocked": false
@@ -583,7 +583,7 @@ module.exports = {
                     "name": "1400 Sushi !",
                     "logo": "icones/sushi.png",
                     "seuil": 1400,
-                    "idcible": 1,
+                    "idcible": 2,
                     "ratio": 4,
                     "typeratio": "gains",
                     "unlocked": false
@@ -592,7 +592,7 @@ module.exports = {
                     "name": "1500 Sushi !",
                     "logo": "icones/sushi.png",
                     "seuil": 1500,
-                    "idcible": 1,
+                    "idcible": 2,
                     "ratio": 4,
                     "typeratio": "gains",
                     "unlocked": false
@@ -601,7 +601,7 @@ module.exports = {
                     "name": "1600 Sushi !",
                     "logo": "icones/sushi.png",
                     "seuil": 1600,
-                    "idcible": 1,
+                    "idcible": 2,
                     "ratio": 4,
                     "typeratio": "gains",
                     "unlocked": false
@@ -610,7 +610,7 @@ module.exports = {
                     "name": "1700 Sushi !",
                     "logo": "icones/sushi.png",
                     "seuil": 1700,
-                    "idcible": 1,
+                    "idcible": 2,
                     "ratio": 4,
                     "typeratio": "gains",
                     "unlocked": false
@@ -619,7 +619,7 @@ module.exports = {
                     "name": "1800 Sushi !",
                     "logo": "icones/sushi.png",
                     "seuil": 1800,
-                    "idcible": 1,
+                    "idcible": 2,
                     "ratio": 4,
                     "typeratio": "gains",
                     "unlocked": false
@@ -628,7 +628,7 @@ module.exports = {
                     "name": "1900 Sushi !",
                     "logo": "icones/sushi.png",
                     "seuil": 1900,
-                    "idcible": 1,
+                    "idcible": 2,
                     "ratio": 4,
                     "typeratio": "gains",
                     "unlocked": false
@@ -637,7 +637,7 @@ module.exports = {
                     "name": "2000 Sushi !",
                     "logo": "icones/sushi.png",
                     "seuil": 2000,
-                    "idcible": 1,
+                    "idcible": 2,
                     "ratio": 4,
                     "typeratio": "gains",
                     "unlocked": false
@@ -645,7 +645,7 @@ module.exports = {
             ],
         },
         {
-            "id": 4,
+            "id": 3,
             "name": "Miso",
             "logo": "icones/miso.png",
             "cout": 9763.2,
@@ -660,7 +660,7 @@ module.exports = {
                     "name": "25 Miso !",
                     "logo": "icones/miso.png",
                     "seuil": 25,
-                    "idcible": 1,
+                    "idcible": 3,
                     "ratio": 2,
                     "typeratio": "gains",
                     "unlocked": false
@@ -669,7 +669,7 @@ module.exports = {
                     "name": "50 Miso !",
                     "logo": "icones/miso.png",
                     "seuil": 50,
-                    "idcible": 1,
+                    "idcible": 3,
                     "ratio": 2,
                     "typeratio": "gains",
                     "unlocked": false
@@ -678,7 +678,7 @@ module.exports = {
                     "name": "100 Miso !",
                     "logo": "icones/miso.png",
                     "seuil": 100,
-                    "idcible": 1,
+                    "idcible": 3,
                     "ratio": 2,
                     "typeratio": "gains",
                     "unlocked": false
@@ -687,7 +687,7 @@ module.exports = {
                     "name": "200 Miso !",
                     "logo": "icones/miso.png",
                     "seuil": 200,
-                    "idcible": 1,
+                    "idcible": 3,
                     "ratio": 2,
                     "typeratio": "gains",
                     "unlocked": false
@@ -696,7 +696,7 @@ module.exports = {
                     "name": "300 Miso !",
                     "logo": "icones/miso.png",
                     "seuil": 300,
-                    "idcible": 1,
+                    "idcible": 3,
                     "ratio": 2,
                     "typeratio": "gains",
                     "unlocked": false
@@ -705,7 +705,7 @@ module.exports = {
                     "name": "400 Miso !",
                     "logo": "icones/miso.png",
                     "seuil": 400,
-                    "idcible": 1,
+                    "idcible": 3,
                     "ratio": 2,
                     "typeratio": "gains",
                     "unlocked": false
@@ -714,7 +714,7 @@ module.exports = {
                     "name": "500 Miso !",
                     "logo": "icones/miso.png",
                     "seuil": 500,
-                    "idcible": 1,
+                    "idcible": 3,
                     "ratio": 4,
                     "typeratio": "gains",
                     "unlocked": false
@@ -723,7 +723,7 @@ module.exports = {
                     "name": "600 Miso !",
                     "logo": "icones/miso.png",
                     "seuil": 600,
-                    "idcible": 1,
+                    "idcible": 3,
                     "ratio": 4,
                     "typeratio": "gains",
                     "unlocked": false
@@ -732,7 +732,7 @@ module.exports = {
                     "name": "700 Miso !",
                     "logo": "icones/miso.png",
                     "seuil": 700,
-                    "idcible": 1,
+                    "idcible": 3,
                     "ratio": 4,
                     "typeratio": "gains",
                     "unlocked": false
@@ -741,7 +741,7 @@ module.exports = {
                     "name": "800 Miso !",
                     "logo": "icones/miso.png",
                     "seuil": 800,
-                    "idcible": 1,
+                    "idcible": 3,
                     "ratio": 4,
                     "typeratio": "gains",
                     "unlocked": false
@@ -750,7 +750,7 @@ module.exports = {
                     "name": "900 Miso !",
                     "logo": "icones/miso.png",
                     "seuil": 900,
-                    "idcible": 1,
+                    "idcible": 3,
                     "ratio": 4,
                     "typeratio": "gains",
                     "unlocked": false
@@ -759,7 +759,7 @@ module.exports = {
                     "name": "1000 Miso !",
                     "logo": "icones/miso.png",
                     "seuil": 1000,
-                    "idcible": 1,
+                    "idcible": 3,
                     "ratio": 5,
                     "typeratio": "gains",
                     "unlocked": false
@@ -768,7 +768,7 @@ module.exports = {
                     "name": "1100 Miso !",
                     "logo": "icones/miso.png",
                     "seuil": 1100,
-                    "idcible": 1,
+                    "idcible": 3,
                     "ratio": 4,
                     "typeratio": "gains",
                     "unlocked": false
@@ -777,7 +777,7 @@ module.exports = {
                     "name": "1200 Miso !",
                     "logo": "icones/miso.png",
                     "seuil": 1200,
-                    "idcible": 1,
+                    "idcible": 3,
                     "ratio": 4,
                     "typeratio": "gains",
                     "unlocked": false
@@ -786,7 +786,7 @@ module.exports = {
                     "name": "1300 Miso !",
                     "logo": "icones/miso.png",
                     "seuil": 1300,
-                    "idcible": 1,
+                    "idcible": 3,
                     "ratio": 4,
                     "typeratio": "gains",
                     "unlocked": false
@@ -795,7 +795,7 @@ module.exports = {
                     "name": "1400 Miso !",
                     "logo": "icones/miso.png",
                     "seuil": 1400,
-                    "idcible": 1,
+                    "idcible": 3,
                     "ratio": 4,
                     "typeratio": "gains",
                     "unlocked": false
@@ -804,7 +804,7 @@ module.exports = {
                     "name": "1500 Miso !",
                     "logo": "icones/miso.png",
                     "seuil": 1500,
-                    "idcible": 1,
+                    "idcible": 3,
                     "ratio": 4,
                     "typeratio": "gains",
                     "unlocked": false
@@ -813,7 +813,7 @@ module.exports = {
                     "name": "1600 Miso !",
                     "logo": "icones/miso.png",
                     "seuil": 1600,
-                    "idcible": 1,
+                    "idcible": 3,
                     "ratio": 4,
                     "typeratio": "gains",
                     "unlocked": false
@@ -822,7 +822,7 @@ module.exports = {
                     "name": "1700 Miso !",
                     "logo": "icones/miso.png",
                     "seuil": 1700,
-                    "idcible": 1,
+                    "idcible": 3,
                     "ratio": 4,
                     "typeratio": "gains",
                     "unlocked": false
@@ -831,7 +831,7 @@ module.exports = {
                     "name": "1800 Miso !",
                     "logo": "icones/miso.png",
                     "seuil": 1800,
-                    "idcible": 1,
+                    "idcible": 3,
                     "ratio": 4,
                     "typeratio": "gains",
                     "unlocked": false
@@ -840,7 +840,7 @@ module.exports = {
                     "name": "1900 Miso !",
                     "logo": "icones/miso.png",
                     "seuil": 1900,
-                    "idcible": 1,
+                    "idcible": 3,
                     "ratio": 4,
                     "typeratio": "gains",
                     "unlocked": false
@@ -849,7 +849,7 @@ module.exports = {
                     "name": "2000 Miso !",
                     "logo": "icones/miso.png",
                     "seuil": 2000,
-                    "idcible": 1,
+                    "idcible": 3,
                     "ratio": 4,
                     "typeratio": "gains",
                     "unlocked": false
@@ -857,7 +857,7 @@ module.exports = {
             ],
         },
         {
-            "id": 5,
+            "id": 4,
             "name": "Onigiri",
             "logo": "icones/onigiri.png",
             "cout": 116121.6,
@@ -872,7 +872,7 @@ module.exports = {
                     "name": "25 Onigiri !",
                     "logo": "icones/onigiri.png",
                     "seuil": 25,
-                    "idcible": 1,
+                    "idcible": 4,
                     "ratio": 2,
                     "typeratio": "gains",
                     "unlocked": false
@@ -881,7 +881,7 @@ module.exports = {
                     "name": "50 Onigiri !",
                     "logo": "icones/onigiri.png",
                     "seuil": 50,
-                    "idcible": 1,
+                    "idcible": 4,
                     "ratio": 2,
                     "typeratio": "gains",
                     "unlocked": false
@@ -890,7 +890,7 @@ module.exports = {
                     "name": "100 Onigiri !",
                     "logo": "icones/onigiri.png",
                     "seuil": 100,
-                    "idcible": 1,
+                    "idcible": 4,
                     "ratio": 2,
                     "typeratio": "gains",
                     "unlocked": false
@@ -899,7 +899,7 @@ module.exports = {
                     "name": "200 Onigiri !",
                     "logo": "icones/onigiri.png",
                     "seuil": 200,
-                    "idcible": 1,
+                    "idcible": 4,
                     "ratio": 2,
                     "typeratio": "gains",
                     "unlocked": false
@@ -908,7 +908,7 @@ module.exports = {
                     "name": "300 Onigiri !",
                     "logo": "icones/onigiri.png",
                     "seuil": 300,
-                    "idcible": 1,
+                    "idcible": 4,
                     "ratio": 2,
                     "typeratio": "gains",
                     "unlocked": false
@@ -917,7 +917,7 @@ module.exports = {
                     "name": "400 Onigiri !",
                     "logo": "icones/onigiri.png",
                     "seuil": 400,
-                    "idcible": 1,
+                    "idcible": 4,
                     "ratio": 2,
                     "typeratio": "gains",
                     "unlocked": false
@@ -926,7 +926,7 @@ module.exports = {
                     "name": "500 Onigiri !",
                     "logo": "icones/onigiri.png",
                     "seuil": 500,
-                    "idcible": 1,
+                    "idcible": 4,
                     "ratio": 4,
                     "typeratio": "gains",
                     "unlocked": false
@@ -935,7 +935,7 @@ module.exports = {
                     "name": "600 Onigiri !",
                     "logo": "icones/onigiri.png",
                     "seuil": 600,
-                    "idcible": 1,
+                    "idcible": 4,
                     "ratio": 4,
                     "typeratio": "gains",
                     "unlocked": false
@@ -944,7 +944,7 @@ module.exports = {
                     "name": "700 Onigiri !",
                     "logo": "icones/onigiri.png",
                     "seuil": 700,
-                    "idcible": 1,
+                    "idcible": 4,
                     "ratio": 4,
                     "typeratio": "gains",
                     "unlocked": false
@@ -953,7 +953,7 @@ module.exports = {
                     "name": "800 Onigiri !",
                     "logo": "icones/onigiri.png",
                     "seuil": 800,
-                    "idcible": 1,
+                    "idcible": 4,
                     "ratio": 4,
                     "typeratio": "gains",
                     "unlocked": false
@@ -962,7 +962,7 @@ module.exports = {
                     "name": "900 Onigiri !",
                     "logo": "icones/onigiri.png",
                     "seuil": 900,
-                    "idcible": 1,
+                    "idcible": 4,
                     "ratio": 4,
                     "typeratio": "gains",
                     "unlocked": false
@@ -971,7 +971,7 @@ module.exports = {
                     "name": "1000 Onigiri !",
                     "logo": "icones/onigiri.png",
                     "seuil": 1000,
-                    "idcible": 1,
+                    "idcible": 4,
                     "ratio": 5,
                     "typeratio": "gains",
                     "unlocked": false
@@ -980,7 +980,7 @@ module.exports = {
                     "name": "1100 Onigiri !",
                     "logo": "icones/onigiri.png",
                     "seuil": 1100,
-                    "idcible": 1,
+                    "idcible": 4,
                     "ratio": 4,
                     "typeratio": "gains",
                     "unlocked": false
@@ -989,7 +989,7 @@ module.exports = {
                     "name": "1200 Onigiri !",
                     "logo": "icones/onigiri.png",
                     "seuil": 1200,
-                    "idcible": 1,
+                    "idcible": 4,
                     "ratio": 4,
                     "typeratio": "gains",
                     "unlocked": false
@@ -998,7 +998,7 @@ module.exports = {
                     "name": "1300 Onigiri !",
                     "logo": "icones/onigiri.png",
                     "seuil": 1300,
-                    "idcible": 1,
+                    "idcible": 4,
                     "ratio": 4,
                     "typeratio": "gains",
                     "unlocked": false
@@ -1007,7 +1007,7 @@ module.exports = {
                     "name": "1400 Onigiri !",
                     "logo": "icones/onigiri.png",
                     "seuil": 1400,
-                    "idcible": 1,
+                    "idcible": 4,
                     "ratio": 4,
                     "typeratio": "gains",
                     "unlocked": false
@@ -1016,7 +1016,7 @@ module.exports = {
                     "name": "1500 Onigiri !",
                     "logo": "icones/onigiri.png",
                     "seuil": 1500,
-                    "idcible": 1,
+                    "idcible": 4,
                     "ratio": 4,
                     "typeratio": "gains",
                     "unlocked": false
@@ -1025,7 +1025,7 @@ module.exports = {
                     "name": "1600 Onigiri !",
                     "logo": "icones/onigiri.png",
                     "seuil": 1600,
-                    "idcible": 1,
+                    "idcible": 4,
                     "ratio": 4,
                     "typeratio": "gains",
                     "unlocked": false
@@ -1034,7 +1034,7 @@ module.exports = {
                     "name": "1700 Onigiri !",
                     "logo": "icones/onigiri.png",
                     "seuil": 1700,
-                    "idcible": 1,
+                    "idcible": 4,
                     "ratio": 4,
                     "typeratio": "gains",
                     "unlocked": false
@@ -1043,7 +1043,7 @@ module.exports = {
                     "name": "1800 Onigiri !",
                     "logo": "icones/onigiri.png",
                     "seuil": 1800,
-                    "idcible": 1,
+                    "idcible": 4,
                     "ratio": 4,
                     "typeratio": "gains",
                     "unlocked": false
@@ -1052,7 +1052,7 @@ module.exports = {
                     "name": "1900 Onigiri !",
                     "logo": "icones/onigiri.png",
                     "seuil": 1900,
-                    "idcible": 1,
+                    "idcible": 4,
                     "ratio": 4,
                     "typeratio": "gains",
                     "unlocked": false
@@ -1061,7 +1061,7 @@ module.exports = {
                     "name": "2000 Onigiri !",
                     "logo": "icones/onigiri.png",
                     "seuil": 2000,
-                    "idcible": 1,
+                    "idcible": 4,
                     "ratio": 4,
                     "typeratio": "gains",
                     "unlocked": false
@@ -1069,7 +1069,7 @@ module.exports = {
             ],
         },
         {
-            "id": 6,
+            "id": 5,
             "name": "Plateau",
             "logo": "icones/plateau.png",
             "cout": 1381017.6,
@@ -1084,7 +1084,7 @@ module.exports = {
                     "name": "25 plateau !",
                     "logo": "icones/plateau.png",
                     "seuil": 25,
-                    "idcible": 1,
+                    "idcible": 5,
                     "ratio": 2,
                     "typeratio": "gains",
                     "unlocked": false
@@ -1093,7 +1093,7 @@ module.exports = {
                     "name": "50 plateau !",
                     "logo": "icones/plateau.png",
                     "seuil": 50,
-                    "idcible": 1,
+                    "idcible": 5,
                     "ratio": 2,
                     "typeratio": "gains",
                     "unlocked": false
@@ -1102,7 +1102,7 @@ module.exports = {
                     "name": "100 plateau !",
                     "logo": "icones/plateau.png",
                     "seuil": 100,
-                    "idcible": 1,
+                    "idcible": 5,
                     "ratio": 2,
                     "typeratio": "gains",
                     "unlocked": false
@@ -1111,7 +1111,7 @@ module.exports = {
                     "name": "200 plateau !",
                     "logo": "icones/plateau.png",
                     "seuil": 200,
-                    "idcible": 1,
+                    "idcible": 5,
                     "ratio": 2,
                     "typeratio": "gains",
                     "unlocked": false
@@ -1120,7 +1120,7 @@ module.exports = {
                     "name": "300 plateau !",
                     "logo": "icones/plateau.png",
                     "seuil": 300,
-                    "idcible": 1,
+                    "idcible": 5,
                     "ratio": 2,
                     "typeratio": "gains",
                     "unlocked": false
@@ -1129,7 +1129,7 @@ module.exports = {
                     "name": "400 plateau !",
                     "logo": "icones/plateau.png",
                     "seuil": 400,
-                    "idcible": 1,
+                    "idcible": 5,
                     "ratio": 2,
                     "typeratio": "gains",
                     "unlocked": false
@@ -1138,7 +1138,7 @@ module.exports = {
                     "name": "500 plateau !",
                     "logo": "icones/plateau.png",
                     "seuil": 500,
-                    "idcible": 1,
+                    "idcible": 5,
                     "ratio": 4,
                     "typeratio": "gains",
                     "unlocked": false
@@ -1147,7 +1147,7 @@ module.exports = {
                     "name": "600 plateau !",
                     "logo": "icones/plateau.png",
                     "seuil": 600,
-                    "idcible": 1,
+                    "idcible": 5,
                     "ratio": 4,
                     "typeratio": "gains",
                     "unlocked": false
@@ -1156,7 +1156,7 @@ module.exports = {
                     "name": "700 plateau !",
                     "logo": "icones/plateau.png",
                     "seuil": 700,
-                    "idcible": 1,
+                    "idcible": 5,
                     "ratio": 4,
                     "typeratio": "gains",
                     "unlocked": false
@@ -1165,7 +1165,7 @@ module.exports = {
                     "name": "800 plateau !",
                     "logo": "icones/plateau.png",
                     "seuil": 800,
-                    "idcible": 1,
+                    "idcible": 5,
                     "ratio": 4,
                     "typeratio": "gains",
                     "unlocked": false
@@ -1174,7 +1174,7 @@ module.exports = {
                     "name": "900 plateau !",
                     "logo": "icones/plateau.png",
                     "seuil": 900,
-                    "idcible": 1,
+                    "idcible": 5,
                     "ratio": 4,
                     "typeratio": "gains",
                     "unlocked": false
@@ -1183,7 +1183,7 @@ module.exports = {
                     "name": "1000 plateau !",
                     "logo": "icones/plateau.png",
                     "seuil": 1000,
-                    "idcible": 1,
+                    "idcible": 5,
                     "ratio": 5,
                     "typeratio": "gains",
                     "unlocked": false
@@ -1192,7 +1192,7 @@ module.exports = {
                     "name": "1100 plateau !",
                     "logo": "icones/plateau.png",
                     "seuil": 1100,
-                    "idcible": 1,
+                    "idcible": 5,
                     "ratio": 4,
                     "typeratio": "gains",
                     "unlocked": false
@@ -1201,7 +1201,7 @@ module.exports = {
                     "name": "1200 plateau !",
                     "logo": "icones/plateau.png",
                     "seuil": 1200,
-                    "idcible": 1,
+                    "idcible": 5,
                     "ratio": 4,
                     "typeratio": "gains",
                     "unlocked": false
@@ -1210,7 +1210,7 @@ module.exports = {
                     "name": "1300 plateau !",
                     "logo": "icones/plateau.png",
                     "seuil": 1300,
-                    "idcible": 1,
+                    "idcible": 5,
                     "ratio": 4,
                     "typeratio": "gains",
                     "unlocked": false
@@ -1219,7 +1219,7 @@ module.exports = {
                     "name": "1400 plateau !",
                     "logo": "icones/plateau.png",
                     "seuil": 1400,
-                    "idcible": 1,
+                    "idcible": 5,
                     "ratio": 4,
                     "typeratio": "gains",
                     "unlocked": false
@@ -1228,7 +1228,7 @@ module.exports = {
                     "name": "1500 plateau !",
                     "logo": "icones/plateau.png",
                     "seuil": 1500,
-                    "idcible": 1,
+                    "idcible": 5,
                     "ratio": 4,
                     "typeratio": "gains",
                     "unlocked": false
@@ -1237,7 +1237,7 @@ module.exports = {
                     "name": "1600 plateau !",
                     "logo": "icones/plateau.png",
                     "seuil": 1600,
-                    "idcible": 1,
+                    "idcible": 5,
                     "ratio": 4,
                     "typeratio": "gains",
                     "unlocked": false
@@ -1246,7 +1246,7 @@ module.exports = {
                     "name": "1700 plateau !",
                     "logo": "icones/plateau.png",
                     "seuil": 1700,
-                    "idcible": 1,
+                    "idcible": 5,
                     "ratio": 4,
                     "typeratio": "gains",
                     "unlocked": false
@@ -1255,7 +1255,7 @@ module.exports = {
                     "name": "1800 plateau !",
                     "logo": "icones/plateau.png",
                     "seuil": 1800,
-                    "idcible": 1,
+                    "idcible": 5,
                     "ratio": 4,
                     "typeratio": "gains",
                     "unlocked": false
@@ -1264,7 +1264,7 @@ module.exports = {
                     "name": "1900 plateau !",
                     "logo": "icones/plateau.png",
                     "seuil": 1900,
-                    "idcible": 1,
+                    "idcible": 5,
                     "ratio": 4,
                     "typeratio": "gains",
                     "unlocked": false
@@ -1273,7 +1273,7 @@ module.exports = {
                     "name": "2000 plateau !",
                     "logo": "icones/plateau.png",
                     "seuil": 2000,
-                    "idcible": 1,
+                    "idcible": 5,
                     "ratio": 4,
                     "typeratio": "gains",
                     "unlocked": false
@@ -1297,7 +1297,7 @@ module.exports = {
             "name": "Nouveau couteau",
             "logo": "icones/sashimi.png",
             "seuil": 250000,
-            "idcible": 1,
+            "idcible": 0,
             "ratio": 3,
             "typeratio": "gain",
             "unlocked": false
@@ -1306,7 +1306,7 @@ module.exports = {
             "name": "Refroidissement express",
             "logo": "icones/sashimi.png",
             "seuil": 2E+19,
-            "idcible": 1,
+            "idcible": 0,
             "ratio": 3,
             "typeratio": "gain",
             "unlocked": false
@@ -1315,7 +1315,7 @@ module.exports = {
             "name": "Bien nourris",
             "logo": "icones/sashimi.png",
             "seuil": 2E+30,
-            "idcible": 1,
+            "idcible": 0,
             "ratio": 3,
             "typeratio": "gain",
             "unlocked": false
@@ -1324,7 +1324,7 @@ module.exports = {
             "name": "Changement du stock",
             "logo": "icones/sashimi.png",
             "seuil": 25E+36,
-            "idcible": 1,
+            "idcible": 0,
             "ratio": 3,
             "typeratio": "gain",
             "unlocked": false
@@ -1333,7 +1333,7 @@ module.exports = {
             "name": "#Fish",
             "logo": "icones/sashimi.png",
             "seuil": 1E+48,
-            "idcible": 1,
+            "idcible": 0,
             "ratio": 7,
             "typeratio": "gain",
             "unlocked": false
@@ -1342,7 +1342,7 @@ module.exports = {
             "name": "Augmentation du prix de la feuille",
             "logo": "icones/maki.png",
             "seuil": 500000,
-            "idcible": 2,
+            "idcible": 1,
             "ratio": 3,
             "typeratio": "gain",
             "unlocked": false
@@ -1351,7 +1351,7 @@ module.exports = {
             "name": "Maki maniac",
             "logo": "icones/maki.png",
             "seuil": 5E+19,
-            "idcible": 2,
+            "idcible": 1,
             "ratio": 3,
             "typeratio": "gain",
             "unlocked": false
@@ -1360,7 +1360,7 @@ module.exports = {
             "name": "Pluie abondante",
             "logo": "icones/maki.png",
             "seuil": 5E+30,
-            "idcible": 2,
+            "idcible": 1,
             "ratio": 3,
             "typeratio": "gain",
             "unlocked": false
@@ -1369,7 +1369,7 @@ module.exports = {
             "name": "Première apparition publique du sushiMan",
             "logo": "icones/maki.png",
             "seuil": 5E+37,
-            "idcible": 2,
+            "idcible": 1,
             "ratio": 3,
             "typeratio": "gain",
             "unlocked": false
@@ -1378,7 +1378,7 @@ module.exports = {
             "name": "Production abusive d'avocat",
             "logo": "icones/maki.png",
             "seuil": 5E+48,
-            "idcible": 2,
+            "idcible": 1,
             "ratio": 7,
             "typeratio": "gain",
             "unlocked": false
@@ -1387,7 +1387,7 @@ module.exports = {
             "name": "Ouverture de multiples restaurant",
             "logo": "icones/sushi.png",
             "seuil": 1000000,
-            "idcible": 3,
+            "idcible": 2,
             "ratio": 3,
             "typeratio": "gain",
             "unlocked": false
@@ -1396,7 +1396,7 @@ module.exports = {
             "name": "Achat d'un nouveau cuiseur à riz",
             "logo": "icones/sushi.png",
             "seuil": 1E+20,
-            "idcible": 3,
+            "idcible": 2,
             "ratio": 3,
             "typeratio": "gain",
             "unlocked": false
@@ -1404,8 +1404,8 @@ module.exports = {
         {
             "name": "Augmentation du pouvoir gluant du riz",
             "logo": "icones/sushi.png",
-            "seuil": 7E+30,
-            "idcible": 3,
+            "seuil": 7E+20,
+            "idcible": 2,
             "ratio": 3,
             "typeratio": "gain",
             "unlocked": false
@@ -1414,7 +1414,7 @@ module.exports = {
             "name": "Création de l'association SushiMan",
             "logo": "icones/sushi.png",
             "seuil": 1E+38,
-            "idcible": 3,
+            "idcible": 2,
             "ratio": 3,
             "typeratio": "gain",
             "unlocked": false
@@ -1423,7 +1423,7 @@ module.exports = {
             "name": "Saveur Umami",
             "logo": "icones/sushi.png",
             "seuil": 25E+48,
-            "idcible": 3,
+            "idcible": 2,
             "ratio": 7,
             "typeratio": "gain",
             "unlocked": false
@@ -1432,7 +1432,7 @@ module.exports = {
             "name": "Tofu 50% plus moelleux",
             "logo": "icones/miso.png",
             "seuil": 5000000,
-            "idcible": 4,
+            "idcible": 3,
             "ratio": 3,
             "typeratio": "gain",
             "unlocked": false
@@ -1441,7 +1441,7 @@ module.exports = {
             "name": "La Isla Bonit séchée",
             "logo": "icones/miso.png",
             "seuil": 5E+20,
-            "idcible": 4,
+            "idcible": 3,
             "ratio": 3,
             "typeratio": "gain",
             "unlocked": false
@@ -1450,7 +1450,7 @@ module.exports = {
             "name": "Le sushiMan a sauvé des enfants de la noyade",
             "logo": "icones/miso.png",
             "seuil": 1E+31,
-            "idcible": 4,
+            "idcible": 3,
             "ratio": 3,
             "typeratio": "gain",
             "unlocked": false
@@ -1459,7 +1459,7 @@ module.exports = {
             "name": "Vous reprendrez bien un saké ?",
             "logo": "icones/miso.png",
             "seuil": 2E+38,
-            "idcible": 4,
+            "idcible": 3,
             "ratio": 3,
             "typeratio": "gain",
             "unlocked": false
@@ -1468,7 +1468,7 @@ module.exports = {
             "name": "Soupe miso remboursée à 30% par la sécu",
             "logo": "icones/miso.png",
             "seuil": 1E+50,
-            "idcible": 4,
+            "idcible": 3,
             "ratio": 7,
             "typeratio": "gain",
             "unlocked": false
@@ -1477,7 +1477,7 @@ module.exports = {
             "name": "Il est frais mon poisson ?",
             "logo": "icones/onigiri.png",
             "seuil": 10000000,
-            "idcible": 5,
+            "idcible": 4,
             "ratio": 3,
             "typeratio": "gain",
             "unlocked": false
@@ -1486,7 +1486,7 @@ module.exports = {
             "name": "Avocado is my Mojo",
             "logo": "icones/onigiri.png",
             "seuil": 1E+24,
-            "idcible": 5,
+            "idcible": 4,
             "ratio": 3,
             "typeratio": "gain",
             "unlocked": false
@@ -1495,7 +1495,7 @@ module.exports = {
             "name": "Création du compte TikTok SushiMan en politique",
             "logo": "icones/onigiri.png",
             "seuil": 2E+31,
-            "idcible": 5,
+            "idcible": 4,
             "ratio": 3,
             "typeratio": "gain",
             "unlocked": false
@@ -1504,7 +1504,7 @@ module.exports = {
             "name": "Thon pense quoi toi ?",
             "logo": "icones/onigiri.png",
             "seuil": 3E+38,
-            "idcible": 5,
+            "idcible": 4,
             "ratio": 3,
             "typeratio": "gain",
             "unlocked": false
@@ -1513,7 +1513,7 @@ module.exports = {
             "name": "Nouvelle vinaigrette",
             "logo": "icones/onigiri.png",
             "seuil": 25E+49,
-            "idcible": 5,
+            "idcible": 4,
             "ratio": 7,
             "typeratio": "gain",
             "unlocked": false
@@ -1522,7 +1522,7 @@ module.exports = {
             "name": "More is less",
             "logo": "icones/plateau.png",
             "seuil": 25000000,
-            "idcible": 6,
+            "idcible": 5,
             "ratio": 3,
             "typeratio": "gain",
             "unlocked": false
@@ -1531,7 +1531,7 @@ module.exports = {
             "name": "Augmentation du pouvoir piquant du wasabi",
             "logo": "icones/plateau.png",
             "seuil": 2E+24,
-            "idcible": 6,
+            "idcible": 5,
             "ratio": 3,
             "typeratio": "gain",
             "unlocked": false
@@ -1540,7 +1540,7 @@ module.exports = {
             "name": "Souple et ferme, pour les fêtes un plateau sushi caviar/foie gras",
             "logo": "icones/plateau.png",
             "seuil": 35E+30,
-            "idcible": 6,
+            "idcible": 5,
             "ratio": 3,
             "typeratio": "gain",
             "unlocked": false
@@ -1549,7 +1549,7 @@ module.exports = {
             "name": "Obtention du prix sushi d'or",
             "logo": "icones/plateau.png",
             "seuil": 4E+38,
-            "idcible": 6,
+            "idcible": 5,
             "ratio": 3,
             "typeratio": "gain",
             "unlocked": false
@@ -1558,7 +1558,7 @@ module.exports = {
             "name": "SushiMan gagne les élections présidentielles",
             "logo": "icones/plateau.png",
             "seuil": 5E+50,
-            "idcible": 6,
+            "idcible": 5,
             "ratio": 7,
             "typeratio": "gain",
             "unlocked": false
@@ -1616,7 +1616,7 @@ module.exports = {
             "name": "Couteau",
             "logo": "icones/couteau.png",
             "seuil": 1000,
-            "idcible": 1,
+            "idcible": 0,
             "ratio": 0,
             "typeratio": "gain",
             "unlocked": false
@@ -1625,7 +1625,7 @@ module.exports = {
             "name": "Sauce Soja",
             "logo": "icones/sauceSoja.png",
             "seuil": 15000,
-            "idcible": 2,
+            "idcible": 1,
             "ratio": 0,
             "typeratio": "gain",
             "unlocked": false
@@ -1634,7 +1634,7 @@ module.exports = {
             "name": "Wasabi",
             "logo": "icones/wasabi.png",
             "seuil": 100000,
-            "idcible": 3,
+            "idcible": 2,
             "ratio": 0,
             "typeratio": "gain",
             "unlocked": false
@@ -1643,7 +1643,7 @@ module.exports = {
             "name": "Naruto",
             "logo": "icones/naruto.png",
             "seuil": 500000,
-            "idcible": 4,
+            "idcible": 3,
             "ratio": 0,
             "typeratio": "gain",
             "unlocked": false
@@ -1652,7 +1652,7 @@ module.exports = {
             "name": "Gingembre",
             "logo": "icones/gingembre.png",
             "seuil": 1200000,
-            "idcible": 5,
+            "idcible": 4,
             "ratio": 0,
             "typeratio": "gain",
             "unlocked": false
@@ -1661,7 +1661,7 @@ module.exports = {
             "name": "Baguette",
             "logo": "icones/baguette.png",
             "seuil": 10000000,
-            "idcible": 6,
+            "idcible": 5,
             "ratio": 0,
             "typeratio": "gain",
             "unlocked": false
