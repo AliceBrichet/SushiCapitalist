@@ -18,23 +18,29 @@ export class AppComponent {
   server = WebserviceService.server;
   serverImage = WebserviceService.serverImage;
   qtmulti = '1';
-  constructor(private service: WebserviceService, private snackBar: MatSnackBar) {
+  constructor(
+    private service: WebserviceService,
+    private snackBar: MatSnackBar
+  ) {
     service.getWorld().then((world) => {
       this.world = world.data.getWorld;
     });
   }
 
   show(state: boolean, route: string) {
-    let el = document.getElementById(route);
-    if(state) {
+    const el = document.getElementById(route);
+    if (state) {
       el?.classList.add('is-active');
     } else {
       el?.classList.remove('is-active');
     }
   }
 
-  onProductionDone(p: Product) {
-    this.world.money += p.revenu;
+  onProductionDone(data: { producedQuantity: number; p: Product }) {
+    console.log(this.world.money);
+    console.log(data.p.revenu);
+    console.log(data.p.quantite);
+    this.world.money += data.p.revenu * data.producedQuantity * data.p.quantite;
   }
 
   onPurchaseDone(cout: number) {
@@ -61,53 +67,52 @@ export class AppComponent {
   }
 
   hireManager(manager: Palier) {
-    if(this.world.money >= manager.seuil) {
+    if (this.world.money >= manager.seuil) {
       this.world.money -= manager.seuil;
       manager.unlocked = true;
       this.world.products[manager.idcible].managerUnlocked = true;
-      this.popMessage("Le manager "+manager.name+" a été engagé avec succès!");
-    }
-    else {
+      this.popMessage(
+        'Le manager ' + manager.name + ' a été engagé avec succès!'
+      );
+    } else {
       throw new Error(
         `Le monde ne possède pas assez d'argent pour engager ce manager`
-      )
+      );
     }
   }
 
   purchaseCashUpgrade(upgrade: Palier) {
-    if(this.world.money >= upgrade.seuil) {
+    if (this.world.money >= upgrade.seuil) {
       this.world.money -= upgrade.seuil;
 
-      let product = this.world.products[upgrade.idcible];
+      const product = this.world.products[upgrade.idcible];
       this.apply(product, upgrade);
 
-      this.popMessage("L'upgrade "+upgrade.name+" a bien été acheté !");
+      this.popMessage("L'upgrade " + upgrade.name + ' a bien été acheté !');
     }
   }
 
-  apply(product : Product, palier: Palier) {
-    if(palier.typeratio === 'gain') {
+  apply(product: Product, palier: Palier) {
+    if (palier.typeratio === 'gain') {
       product.revenu *= palier.ratio;
-    }
-    else if(palier.typeratio === 'vitesse') {
-      product.vitesse /= palier.ratio
-      product.timeleft /= palier.ratio
+    } else if (palier.typeratio === 'vitesse') {
+      product.vitesse /= palier.ratio;
+      product.timeleft /= palier.ratio;
     }
     palier.unlocked = true;
   }
 
   getUnlocks() {
     const products = this.world.products;
-    let list : Palier[]  = [];
-  
-    products.forEach(p => {
-      list = list.concat(p.paliers.filter(u =>
-        p.quantite <= u.seuil &&
-        u.unlocked === false
-      ))
-    })
+    let list: Palier[] = [];
 
-    list.sort(function(a,b) {
+    products.forEach((p) => {
+      list = list.concat(
+        p.paliers.filter((u) => p.quantite <= u.seuil && u.unlocked === false)
+      );
+    });
+
+    list.sort(function (a, b) {
       return a.seuil - b.seuil;
     });
 
@@ -115,17 +120,16 @@ export class AppComponent {
   }
 
   getAllUnlocks() {
-    const products = this.world.products
+    const products = this.world.products;
     const min = products.reduce((min, item) => {
-        return min < item.quantite ? item.quantite : min
-    }, products[0].quantite)
+      return min < item.quantite ? item.quantite : min;
+    }, products[0].quantite);
 
-    const list = this.world.allunlocks.filter(a => 
-        a.seuil >= min &&
-        a.unlocked === false
-    )
+    const list = this.world.allunlocks.filter(
+      (a) => a.seuil >= min && a.unlocked === false
+    );
 
-    list.sort(function(a,b) {
+    list.sort(function (a, b) {
       return a.seuil - b.seuil;
     });
 
@@ -134,7 +138,7 @@ export class AppComponent {
 
   //Gestion unlock : créer une liste des unlock et des allUnlocks pour les affichers dans 2 onglets différents
 
-  popMessage(message : string) : void {
-    this.snackBar.open(message, "", {duration : 2000})
+  popMessage(message: string): void {
+    this.snackBar.open(message, '', { duration: 2000 });
   }
 }

@@ -16,7 +16,12 @@ import { MatSnackBarModule } from '@angular/material/snack-bar';
     BigvaluePipe,
     MyProgressBarComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule, NoopAnimationsModule, MatSnackBarModule],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    NoopAnimationsModule,
+    MatSnackBarModule,
+  ],
   providers: [],
   bootstrap: [AppComponent],
 })

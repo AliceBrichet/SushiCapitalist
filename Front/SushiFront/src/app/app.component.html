@@ -30,13 +30,28 @@
           <div class="hero-head">
             <div class="columns is-multiline">
               <div class="column">
-                <button (click)="show(true,'unlocks')" class="button is-danger">Unlocks</button>
+                <button
+                  (click)="show(true, 'unlocks')"
+                  class="button is-danger"
+                >
+                  Unlocks
+                </button>
               </div>
               <div class="column">
-                <button (click)="show(true,'upgrades')" class="button is-danger">Upgrades</button>
+                <button
+                  (click)="show(true, 'upgrades')"
+                  class="button is-danger"
+                >
+                  Upgrades
+                </button>
               </div>
               <div class="column">
-                <button (click)="show(true,'managers')" class="button is-danger">Managers</button>
+                <button
+                  (click)="show(true, 'managers')"
+                  class="button is-danger"
+                >
+                  Managers
+                </button>
               </div>
             </div>
           </div>
@@ -110,21 +125,43 @@
           <div class="modal-card">
             <header class="modal-card-head has-background-warning-light">
               <p class="modal-card-title is-size-3">Managers</p>
-              <button (click)="show(false, 'managers')" class="delete" aria-label="close"></button>
+              <button
+                (click)="show(false, 'managers')"
+                class="delete"
+                aria-label="close"
+              ></button>
             </header>
             <section class="modal-card-body backgroundModal">
               <div class="tile is-vertical">
                 <div *ngFor="let manager of world.managers">
                   <div *ngIf="!manager.unlocked">
                     <div class="tile is-parent">
-                      <article class="tile columns is-child notification is-success">
-                        <figure class="product dotManager is-3 has-background-warning-light image is-96x96">
+                      <article
+                        class="tile columns is-child notification is-success"
+                      >
+                        <figure
+                          class="product dotManager is-3 has-background-warning-light image is-96x96"
+                        >
                           <img [attr.src]="serverImage + manager.logo" />
                         </figure>
                         <div class="column is-8">
-                          <div class="is-center title manager-title is-3"> {{ manager.name}} </div>
-                          <div class="is-center title is-5"> Prépare les {{ world.products[manager.idcible].name }} ! </div>
-                          <button class="button-53 has-background-warning-light" (click)="hireManager(manager)" role="button" [ngClass]="{'disabled' : (world.money < manager.seuil)}">Engager pour {{manager.seuil}} !</button>
+                          <div class="is-center title manager-title is-3">
+                            {{ manager.name }}
+                          </div>
+                          <div class="is-center title is-5">
+                            Prépare les
+                            {{ world.products[manager.idcible].name }} !
+                          </div>
+                          <button
+                            class="button-53 has-background-warning-light"
+                            (click)="hireManager(manager)"
+                            role="button"
+                            [ngClass]="{
+                              disabled: world.money < manager.seuil
+                            }"
+                          >
+                            Engager pour {{ manager.seuil }} !
+                          </button>
                         </div>
                       </article>
                     </div>
@@ -139,23 +176,44 @@
           <div class="modal-card">
             <header class="modal-card-head has-background-warning-light">
               <p class="modal-card-title is-size-3">Upgrades</p>
-              <button (click)="show(false, 'upgrades')" class="delete" aria-label="close"></button>
+              <button
+                (click)="show(false, 'upgrades')"
+                class="delete"
+                aria-label="close"
+              ></button>
             </header>
             <section class="modal-card-body backgroundModal">
               <div class="tile is-vertical">
                 <div *ngFor="let upgrade of world.upgrades">
                   <div *ngIf="!upgrade.unlocked">
                     <div class="tile is-parent">
-                      <article class="tile columns is-child notification is-success">
-                        <figure class="product dot has-background-warning-light image is-64x64">
+                      <article
+                        class="tile columns is-child notification is-success"
+                      >
+                        <figure
+                          class="product dot has-background-warning-light image is-64x64"
+                        >
                           <img [attr.src]="serverImage + upgrade.logo" />
                         </figure>
                         <div class="column is-8">
-                          <div class="is-center title manager-title is-4"> {{ upgrade.name}} </div>
-                          <hr>
-                          <div class="is-center title is-light is-6"> Augmente le {{upgrade.typeratio}} par {{upgrade.ratio}} de la préparation des {{ world.products[upgrade.idcible].name }} ! </div>
-                          <button class="button-53 has-background-warning-light" (click)="purchaseCashUpgrade(upgrade)" role="button" [ngClass]="{'disabled' : (world.money < upgrade.seuil)}">
-                            <p> Acheter pour </p>
+                          <div class="is-center title manager-title is-4">
+                            {{ upgrade.name }}
+                          </div>
+                          <hr />
+                          <div class="is-center title is-light is-6">
+                            Augmente le {{ upgrade.typeratio }} par
+                            {{ upgrade.ratio }} de la préparation des
+                            {{ world.products[upgrade.idcible].name }} !
+                          </div>
+                          <button
+                            class="button-53 has-background-warning-light"
+                            (click)="purchaseCashUpgrade(upgrade)"
+                            role="button"
+                            [ngClass]="{
+                              disabled: world.money < upgrade.seuil
+                            }"
+                          >
+                            <p>Acheter pour</p>
                             <p [innerHTML]="upgrade.seuil | bigvalue"></p>
                           </button>
                         </div>
@@ -172,7 +230,11 @@
           <div class="modal-card">
             <header class="modal-card-head has-background-warning-light">
               <p class="modal-card-title is-size-3">Unlocks</p>
-              <button (click)="show(false, 'unlocks')" class="delete" aria-label="close"></button>
+              <button
+                (click)="show(false, 'unlocks')"
+                class="delete"
+                aria-label="close"
+              ></button>
             </header>
             <!--<header class="modal-card-head has-background-warning-light">
               <div class="tabs is-large">
@@ -188,15 +250,24 @@
                 <div *ngFor="let unlock of getUnlocks()">
                   <div *ngIf="!unlock.unlocked">
                     <div class="tile is-parent">
-                      <article class="tile columns is-child notification is-success">
-                        <figure class="product dot has-background-warning-light image is-64x64">
+                      <article
+                        class="tile columns is-child notification is-success"
+                      >
+                        <figure
+                          class="product dot has-background-warning-light image is-64x64"
+                        >
                           <img [attr.src]="serverImage + unlock.logo" />
                         </figure>
                         <div class="column is-8">
-                          <div class="is-center title manager-title is-4"> {{ unlock.name}} </div>
-                          <hr>
-                          <button class="button-53 disabled has-background-warning-light" role="button">
-                            <p> Se débloque à </p>
+                          <div class="is-center title manager-title is-4">
+                            {{ unlock.name }}
+                          </div>
+                          <hr />
+                          <button
+                            class="button-53 disabled has-background-warning-light"
+                            role="button"
+                          >
+                            <p>Se débloque à</p>
                             <p [innerHTML]="unlock.seuil"></p>
                           </button>
                         </div>

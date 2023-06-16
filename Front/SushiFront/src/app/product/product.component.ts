@@ -18,6 +18,7 @@ export class ProductComponent implements OnInit {
   serverImage = WebserviceService.serverImage;
   orientation = Orientation.horizontal;
   run = false;
+  producedQuantity = 0;
   maxQuantity = 0;
   coutNProduct = 0;
   worldMoney = 0;
@@ -39,15 +40,17 @@ export class ProductComponent implements OnInit {
   @Input() set money(value: number) {
     this.worldMoney = value;
   }
-  @Output() notifyProduction: EventEmitter<Product> =
-    new EventEmitter<Product>();
+  @Output() notifyProduction: EventEmitter<{
+    p: Product;
+    producedQuantity: number;
+  }> = new EventEmitter<{ p: Product; producedQuantity: number }>();
 
   @Output() notifyPurchase: EventEmitter<number> = new EventEmitter<number>();
 
   startFabrication() {
     if (this.product.quantite > 0) {
       this.product.timeleft = this.product.vitesse;
-      console.log(this.product);
+      // console.log(this.product);
       this.product.lastupdate = Date.now();
       this.run = true;
     }
@@ -57,19 +60,41 @@ export class ProductComponent implements OnInit {
     setInterval(() => {
       this.calcScore();
       this.calcCoutN();
+      // console.log(this.producedQuantity);
     }, 100);
   }
 
   calcScore() {
     if (!this.product) return;
     const currentTime = Date.now();
-    const elapsedTime = currentTime - this.product.lastupdate;
+    let elapsedTime = currentTime - this.product.lastupdate;
+    this.product.lastupdate = Date.now();
+    this.producedQuantity = 0;
     if (this.product.timeleft != 0) {
       if (elapsedTime >= this.product.timeleft) {
-        this.product.quantite += 1;
-        this.product.timeleft = 0;
-        this.run = false;
-        this.notifyProduction.emit(this.product);
+        if (this.product.managerUnlocked == true) {
+          console.log('timeleft ' + this.product.timeleft);
+          console.log('elapsedtime' + elapsedTime);
+          console.log('vitesse' + this.product.vitesse);
+          elapsedTime -= this.product.timeleft;
+          this.product.timeleft =
+            this.product.vitesse - (elapsedTime % this.product.vitesse);
+          this.producedQuantity =
+            1 + Math.floor(elapsedTime / this.product.vitesse);
+          console.log('Quantité produite' + this.producedQuantity);
+          this.notifyProduction.emit({
+            p: this.product,
+            producedQuantity: this.producedQuantity,
+          });
+        } else {
+          this.product.timeleft = 0;
+          this.run = false;
+          this.producedQuantity = 1;
+          this.notifyProduction.emit({
+            p: this.product,
+            producedQuantity: this.producedQuantity,
+          });
+        }
         // ne gère pas encore le calc pour manager unlock
       } else {
         this.product.timeleft = this.product.timeleft - elapsedTime;
@@ -88,13 +113,14 @@ export class ProductComponent implements OnInit {
   }
 
   calcCoutN() {
+    if (!this.product) return;
+    //console.log(this.product);
     if (this.worldQtmulti != 'Max') {
       this.coutNProduct = 0;
       this.multiplicateur = parseInt(this.worldQtmulti);
     } else {
       this.multiplicateur = this.calcMaxCanBuy();
       this.can = 'can';
-      //cout ok sauf pour max ...
     }
     this.coutNProduct =
       (this.product.cout *
