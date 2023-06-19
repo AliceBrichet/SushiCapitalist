@@ -26,7 +26,7 @@ module.exports = {
                     "seuil": 25,
                     "idcible": 0,
                     "ratio": 2,
-                    "typeratio": "gains",
+                    "typeratio": "gain",
                     "unlocked": false
                 },
                 {
@@ -35,7 +35,7 @@ module.exports = {
                     "seuil": 50,
                     "idcible": 0,
                     "ratio": 2,
-                    "typeratio": "gains",
+                    "typeratio": "gain",
                     "unlocked": false
                 },
                 {
@@ -44,7 +44,7 @@ module.exports = {
                     "seuil": 100,
                     "idcible": 0,
                     "ratio": 2,
-                    "typeratio": "gains",
+                    "typeratio": "gain",
                     "unlocked": false
                 },
                 {
@@ -53,7 +53,7 @@ module.exports = {
                     "seuil": 200,
                     "idcible": 0,
                     "ratio": 2,
-                    "typeratio": "gains",
+                    "typeratio": "gain",
                     "unlocked": false
                 },
                 {
@@ -62,7 +62,7 @@ module.exports = {
                     "seuil": 300,
                     "idcible": 0,
                     "ratio": 2,
-                    "typeratio": "gains",
+                    "typeratio": "gain",
                     "unlocked": false
                 },
                 {
@@ -71,7 +71,7 @@ module.exports = {
                     "seuil": 400,
                     "idcible": 0,
                     "ratio": 2,
-                    "typeratio": "gains",
+                    "typeratio": "gain",
                     "unlocked": false
                 },
                 {
@@ -80,7 +80,7 @@ module.exports = {
                     "seuil": 500,
                     "idcible": 0,
                     "ratio": 4,
-                    "typeratio": "gains",
+                    "typeratio": "gain",
                     "unlocked": false
                 },
                 {
@@ -89,7 +89,7 @@ module.exports = {
                     "seuil": 600,
                     "idcible": 0,
                     "ratio": 4,
-                    "typeratio": "gains",
+                    "typeratio": "gain",
                     "unlocked": false
                 },
                 {
@@ -98,7 +98,7 @@ module.exports = {
                     "seuil": 700,
                     "idcible": 0,
                     "ratio": 4,
-                    "typeratio": "gains",
+                    "typeratio": "gain",
                     "unlocked": false
                 },
                 {
@@ -107,7 +107,7 @@ module.exports = {
                     "seuil": 800,
                     "idcible": 0,
                     "ratio": 4,
-                    "typeratio": "gains",
+                    "typeratio": "gain",
                     "unlocked": false
                 },
                 {
@@ -116,7 +116,7 @@ module.exports = {
                     "seuil": 900,
                     "idcible": 0,
                     "ratio": 4,
-                    "typeratio": "gains",
+                    "typeratio": "gain",
                     "unlocked": false
                 },
                 {
@@ -125,7 +125,7 @@ module.exports = {
                     "seuil": 1000,
                     "idcible": 0,
                     "ratio": 5,
-                    "typeratio": "gains",
+                    "typeratio": "gain",
                     "unlocked": false
                 },
                 {
@@ -134,7 +134,7 @@ module.exports = {
                     "seuil": 1100,
                     "idcible": 0,
                     "ratio": 4,
-                    "typeratio": "gains",
+                    "typeratio": "gain",
                     "unlocked": false
                 },
                 {
@@ -143,7 +143,7 @@ module.exports = {
                     "seuil": 1200,
                     "idcible": 0,
                     "ratio": 4,
-                    "typeratio": "gains",
+                    "typeratio": "gain",
                     "unlocked": false
                 },
                 {
@@ -152,7 +152,7 @@ module.exports = {
                     "seuil": 1300,
                     "idcible": 0,
                     "ratio": 4,
-                    "typeratio": "gains",
+                    "typeratio": "gain",
                     "unlocked": false
                 },
                 {
@@ -161,7 +161,7 @@ module.exports = {
                     "seuil": 1400,
                     "idcible": 0,
                     "ratio": 4,
-                    "typeratio": "gains",
+                    "typeratio": "gain",
                     "unlocked": false
                 },
                 {
@@ -170,7 +170,7 @@ module.exports = {
                     "seuil": 1500,
                     "idcible": 0,
                     "ratio": 4,
-                    "typeratio": "gains",
+                    "typeratio": "gain",
                     "unlocked": false
                 },
                 {
@@ -179,7 +179,7 @@ module.exports = {
                     "seuil": 1600,
                     "idcible": 0,
                     "ratio": 4,
-                    "typeratio": "gains",
+                    "typeratio": "gain",
                     "unlocked": false
                 },
                 {
@@ -188,7 +188,7 @@ module.exports = {
                     "seuil": 1700,
                     "idcible": 0,
                     "ratio": 4,
-                    "typeratio": "gains",
+                    "typeratio": "gain",
                     "unlocked": false
                 },
                 {
@@ -197,7 +197,7 @@ module.exports = {
                     "seuil": 1800,
                     "idcible": 0,
                     "ratio": 4,
-                    "typeratio": "gains",
+                    "typeratio": "gain",
                     "unlocked": false
                 },
                 {
@@ -206,7 +206,7 @@ module.exports = {
                     "seuil": 1900,
                     "idcible": 0,
                     "ratio": 4,
-                    "typeratio": "gains",
+                    "typeratio": "gain",
                     "unlocked": false
                 },
                 {
@@ -215,7 +215,7 @@ module.exports = {
                     "seuil": 2000,
                     "idcible": 0,
                     "ratio": 4,
-                    "typeratio": "gains",
+                    "typeratio": "gain",
                     "unlocked": false
                 },
             ],
@@ -238,7 +238,7 @@ module.exports = {
                     "seuil": 25,
                     "idcible": 1,
                     "ratio": 2,
-                    "typeratio": "gains",
+                    "typeratio": "gain",
                     "unlocked": false
                 },
                 {
@@ -247,7 +247,7 @@ module.exports = {
                     "seuil": 50,
                     "idcible": 1,
                     "ratio": 2,
-                    "typeratio": "gains",
+                    "typeratio": "gain",
                     "unlocked": false
                 },
                 {
@@ -256,7 +256,7 @@ module.exports = {
                     "seuil": 100,
                     "idcible": 1,
                     "ratio": 2,
-                    "typeratio": "gains",
+                    "typeratio": "gain",
                     "unlocked": false
                 },
                 {
@@ -265,7 +265,7 @@ module.exports = {
                     "seuil": 200,
                     "idcible": 1,
                     "ratio": 2,
-                    "typeratio": "gains",
+                    "typeratio": "gain",
                     "unlocked": false
                 },
                 {
@@ -274,7 +274,7 @@ module.exports = {
                     "seuil": 300,
                     "idcible": 1,
                     "ratio": 2,
-                    "typeratio": "gains",
+                    "typeratio": "gain",
                     "unlocked": false
                 },
                 {
@@ -283,7 +283,7 @@ module.exports = {
                     "seuil": 400,
                     "idcible": 1,
                     "ratio": 2,
-                    "typeratio": "gains",
+                    "typeratio": "gain",
                     "unlocked": false
                 },
                 {
@@ -292,7 +292,7 @@ module.exports = {
                     "seuil": 500,
                     "idcible": 1,
                     "ratio": 4,
-                    "typeratio": "gains",
+                    "typeratio": "gain",
                     "unlocked": false
                 },
                 {
@@ -301,7 +301,7 @@ module.exports = {
                     "seuil": 600,
                     "idcible": 1,
                     "ratio": 4,
-                    "typeratio": "gains",
+                    "typeratio": "gain",
                     "unlocked": false
                 },
                 {
@@ -310,7 +310,7 @@ module.exports = {
                     "seuil": 700,
                     "idcible": 1,
                     "ratio": 4,
-                    "typeratio": "gains",
+                    "typeratio": "gain",
                     "unlocked": false
                 },
                 {
@@ -319,7 +319,7 @@ module.exports = {
                     "seuil": 800,
                     "idcible": 1,
                     "ratio": 4,
-                    "typeratio": "gains",
+                    "typeratio": "gain",
                     "unlocked": false
                 },
                 {
@@ -328,7 +328,7 @@ module.exports = {
                     "seuil": 900,
                     "idcible": 1,
                     "ratio": 4,
-                    "typeratio": "gains",
+                    "typeratio": "gain",
                     "unlocked": false
                 },
                 {
@@ -337,7 +337,7 @@ module.exports = {
                     "seuil": 1000,
                     "idcible": 1,
                     "ratio": 5,
-                    "typeratio": "gains",
+                    "typeratio": "gain",
                     "unlocked": false
                 },
                 {
@@ -346,7 +346,7 @@ module.exports = {
                     "seuil": 1100,
                     "idcible": 1,
                     "ratio": 4,
-                    "typeratio": "gains",
+                    "typeratio": "gain",
                     "unlocked": false
                 },
                 {
@@ -355,7 +355,7 @@ module.exports = {
                     "seuil": 1200,
                     "idcible": 1,
                     "ratio": 4,
-                    "typeratio": "gains",
+                    "typeratio": "gain",
                     "unlocked": false
                 },
                 {
@@ -364,7 +364,7 @@ module.exports = {
                     "seuil": 1300,
                     "idcible": 1,
                     "ratio": 4,
-                    "typeratio": "gains",
+                    "typeratio": "gain",
                     "unlocked": false
                 },
                 {
@@ -373,7 +373,7 @@ module.exports = {
                     "seuil": 1400,
                     "idcible": 1,
                     "ratio": 4,
-                    "typeratio": "gains",
+                    "typeratio": "gain",
                     "unlocked": false
                 },
                 {
@@ -382,7 +382,7 @@ module.exports = {
                     "seuil": 1500,
                     "idcible": 1,
                     "ratio": 4,
-                    "typeratio": "gains",
+                    "typeratio": "gain",
                     "unlocked": false
                 },
                 {
@@ -391,7 +391,7 @@ module.exports = {
                     "seuil": 1600,
                     "idcible": 1,
                     "ratio": 4,
-                    "typeratio": "gains",
+                    "typeratio": "gain",
                     "unlocked": false
                 },
                 {
@@ -400,7 +400,7 @@ module.exports = {
                     "seuil": 1700,
                     "idcible": 1,
                     "ratio": 4,
-                    "typeratio": "gains",
+                    "typeratio": "gain",
                     "unlocked": false
                 },
                 {
@@ -409,7 +409,7 @@ module.exports = {
                     "seuil": 1800,
                     "idcible": 1,
                     "ratio": 4,
-                    "typeratio": "gains",
+                    "typeratio": "gain",
                     "unlocked": false
                 },
                 {
@@ -418,7 +418,7 @@ module.exports = {
                     "seuil": 1900,
                     "idcible": 1,
                     "ratio": 4,
-                    "typeratio": "gains",
+                    "typeratio": "gain",
                     "unlocked": false
                 },
                 {
@@ -427,7 +427,7 @@ module.exports = {
                     "seuil": 2000,
                     "idcible": 1,
                     "ratio": 4,
-                    "typeratio": "gains",
+                    "typeratio": "gain",
                     "unlocked": false
                 },
             ],
@@ -450,7 +450,7 @@ module.exports = {
                     "seuil": 25,
                     "idcible": 2,
                     "ratio": 2,
-                    "typeratio": "gains",
+                    "typeratio": "gain",
                     "unlocked": false
                 },
                 {
@@ -459,7 +459,7 @@ module.exports = {
                     "seuil": 50,
                     "idcible": 2,
                     "ratio": 2,
-                    "typeratio": "gains",
+                    "typeratio": "gain",
                     "unlocked": false
                 },
                 {
@@ -468,7 +468,7 @@ module.exports = {
                     "seuil": 100,
                     "idcible": 2,
                     "ratio": 2,
-                    "typeratio": "gains",
+                    "typeratio": "gain",
                     "unlocked": false
                 },
                 {
@@ -477,7 +477,7 @@ module.exports = {
                     "seuil": 200,
                     "idcible": 2,
                     "ratio": 2,
-                    "typeratio": "gains",
+                    "typeratio": "gain",
                     "unlocked": false
                 },
                 {
@@ -486,7 +486,7 @@ module.exports = {
                     "seuil": 300,
                     "idcible": 2,
                     "ratio": 2,
-                    "typeratio": "gains",
+                    "typeratio": "gain",
                     "unlocked": false
                 },
                 {
@@ -495,7 +495,7 @@ module.exports = {
                     "seuil": 400,
                     "idcible": 2,
                     "ratio": 2,
-                    "typeratio": "gains",
+                    "typeratio": "gain",
                     "unlocked": false
                 },
                 {
@@ -504,7 +504,7 @@ module.exports = {
                     "seuil": 500,
                     "idcible": 2,
                     "ratio": 4,
-                    "typeratio": "gains",
+                    "typeratio": "gain",
                     "unlocked": false
                 },
                 {
@@ -513,7 +513,7 @@ module.exports = {
                     "seuil": 600,
                     "idcible": 2,
                     "ratio": 4,
-                    "typeratio": "gains",
+                    "typeratio": "gain",
                     "unlocked": false
                 },
                 {
@@ -522,7 +522,7 @@ module.exports = {
                     "seuil": 700,
                     "idcible": 2,
                     "ratio": 4,
-                    "typeratio": "gains",
+                    "typeratio": "gain",
                     "unlocked": false
                 },
                 {
@@ -531,7 +531,7 @@ module.exports = {
                     "seuil": 800,
                     "idcible": 2,
                     "ratio": 4,
-                    "typeratio": "gains",
+                    "typeratio": "gain",
                     "unlocked": false
                 },
                 {
@@ -540,7 +540,7 @@ module.exports = {
                     "seuil": 900,
                     "idcible": 2,
                     "ratio": 4,
-                    "typeratio": "gains",
+                    "typeratio": "gain",
                     "unlocked": false
                 },
                 {
@@ -549,7 +549,7 @@ module.exports = {
                     "seuil": 1000,
                     "idcible": 2,
                     "ratio": 5,
-                    "typeratio": "gains",
+                    "typeratio": "gain",
                     "unlocked": false
                 },
                 {
@@ -558,7 +558,7 @@ module.exports = {
                     "seuil": 1100,
                     "idcible": 2,
                     "ratio": 4,
-                    "typeratio": "gains",
+                    "typeratio": "gain",
                     "unlocked": false
                 },
                 {
@@ -567,7 +567,7 @@ module.exports = {
                     "seuil": 1200,
                     "idcible": 2,
                     "ratio": 4,
-                    "typeratio": "gains",
+                    "typeratio": "gain",
                     "unlocked": false
                 },
                 {
@@ -576,7 +576,7 @@ module.exports = {
                     "seuil": 1300,
                     "idcible": 2,
                     "ratio": 4,
-                    "typeratio": "gains",
+                    "typeratio": "gain",
                     "unlocked": false
                 },
                 {
@@ -585,7 +585,7 @@ module.exports = {
                     "seuil": 1400,
                     "idcible": 2,
                     "ratio": 4,
-                    "typeratio": "gains",
+                    "typeratio": "gain",
                     "unlocked": false
                 },
                 {
@@ -594,7 +594,7 @@ module.exports = {
                     "seuil": 1500,
                     "idcible": 2,
                     "ratio": 4,
-                    "typeratio": "gains",
+                    "typeratio": "gain",
                     "unlocked": false
                 },
                 {
@@ -603,7 +603,7 @@ module.exports = {
                     "seuil": 1600,
                     "idcible": 2,
                     "ratio": 4,
-                    "typeratio": "gains",
+                    "typeratio": "gain",
                     "unlocked": false
                 },
                 {
@@ -612,7 +612,7 @@ module.exports = {
                     "seuil": 1700,
                     "idcible": 2,
                     "ratio": 4,
-                    "typeratio": "gains",
+                    "typeratio": "gain",
                     "unlocked": false
                 },
                 {
@@ -621,7 +621,7 @@ module.exports = {
                     "seuil": 1800,
                     "idcible": 2,
                     "ratio": 4,
-                    "typeratio": "gains",
+                    "typeratio": "gain",
                     "unlocked": false
                 },
                 {
@@ -630,7 +630,7 @@ module.exports = {
                     "seuil": 1900,
                     "idcible": 2,
                     "ratio": 4,
-                    "typeratio": "gains",
+                    "typeratio": "gain",
                     "unlocked": false
                 },
                 {
@@ -639,7 +639,7 @@ module.exports = {
                     "seuil": 2000,
                     "idcible": 2,
                     "ratio": 4,
-                    "typeratio": "gains",
+                    "typeratio": "gain",
                     "unlocked": false
                 },
             ],
@@ -662,7 +662,7 @@ module.exports = {
                     "seuil": 25,
                     "idcible": 3,
                     "ratio": 2,
-                    "typeratio": "gains",
+                    "typeratio": "gain",
                     "unlocked": false
                 },
                 {
@@ -671,7 +671,7 @@ module.exports = {
                     "seuil": 50,
                     "idcible": 3,
                     "ratio": 2,
-                    "typeratio": "gains",
+                    "typeratio": "gain",
                     "unlocked": false
                 },
                 {
@@ -680,7 +680,7 @@ module.exports = {
                     "seuil": 100,
                     "idcible": 3,
                     "ratio": 2,
-                    "typeratio": "gains",
+                    "typeratio": "gain",
                     "unlocked": false
                 },
                 {
@@ -689,7 +689,7 @@ module.exports = {
                     "seuil": 200,
                     "idcible": 3,
                     "ratio": 2,
-                    "typeratio": "gains",
+                    "typeratio": "gain",
                     "unlocked": false
                 },
                 {
@@ -698,7 +698,7 @@ module.exports = {
                     "seuil": 300,
                     "idcible": 3,
                     "ratio": 2,
-                    "typeratio": "gains",
+                    "typeratio": "gain",
                     "unlocked": false
                 },
                 {
@@ -707,7 +707,7 @@ module.exports = {
                     "seuil": 400,
                     "idcible": 3,
                     "ratio": 2,
-                    "typeratio": "gains",
+                    "typeratio": "gain",
                     "unlocked": false
                 },
                 {
@@ -716,7 +716,7 @@ module.exports = {
                     "seuil": 500,
                     "idcible": 3,
                     "ratio": 4,
-                    "typeratio": "gains",
+                    "typeratio": "gain",
                     "unlocked": false
                 },
                 {
@@ -725,7 +725,7 @@ module.exports = {
                     "seuil": 600,
                     "idcible": 3,
                     "ratio": 4,
-                    "typeratio": "gains",
+                    "typeratio": "gain",
                     "unlocked": false
                 },
                 {
@@ -734,7 +734,7 @@ module.exports = {
                     "seuil": 700,
                     "idcible": 3,
                     "ratio": 4,
-                    "typeratio": "gains",
+                    "typeratio": "gain",
                     "unlocked": false
                 },
                 {
@@ -743,7 +743,7 @@ module.exports = {
                     "seuil": 800,
                     "idcible": 3,
                     "ratio": 4,
-                    "typeratio": "gains",
+                    "typeratio": "gain",
                     "unlocked": false
                 },
                 {
@@ -752,7 +752,7 @@ module.exports = {
                     "seuil": 900,
                     "idcible": 3,
                     "ratio": 4,
-                    "typeratio": "gains",
+                    "typeratio": "gain",
                     "unlocked": false
                 },
                 {
@@ -761,7 +761,7 @@ module.exports = {
                     "seuil": 1000,
                     "idcible": 3,
                     "ratio": 5,
-                    "typeratio": "gains",
+                    "typeratio": "gain",
                     "unlocked": false
                 },
                 {
@@ -770,7 +770,7 @@ module.exports = {
                     "seuil": 1100,
                     "idcible": 3,
                     "ratio": 4,
-                    "typeratio": "gains",
+                    "typeratio": "gain",
                     "unlocked": false
                 },
                 {
@@ -779,7 +779,7 @@ module.exports = {
                     "seuil": 1200,
                     "idcible": 3,
                     "ratio": 4,
-                    "typeratio": "gains",
+                    "typeratio": "gain",
                     "unlocked": false
                 },
                 {
@@ -788,7 +788,7 @@ module.exports = {
                     "seuil": 1300,
                     "idcible": 3,
                     "ratio": 4,
-                    "typeratio": "gains",
+                    "typeratio": "gain",
                     "unlocked": false
                 },
                 {
@@ -797,7 +797,7 @@ module.exports = {
                     "seuil": 1400,
                     "idcible": 3,
                     "ratio": 4,
-                    "typeratio": "gains",
+                    "typeratio": "gain",
                     "unlocked": false
                 },
                 {
@@ -806,7 +806,7 @@ module.exports = {
                     "seuil": 1500,
                     "idcible": 3,
                     "ratio": 4,
-                    "typeratio": "gains",
+                    "typeratio": "gain",
                     "unlocked": false
                 },
                 {
@@ -815,7 +815,7 @@ module.exports = {
                     "seuil": 1600,
                     "idcible": 3,
                     "ratio": 4,
-                    "typeratio": "gains",
+                    "typeratio": "gain",
                     "unlocked": false
                 },
                 {
@@ -824,7 +824,7 @@ module.exports = {
                     "seuil": 1700,
                     "idcible": 3,
                     "ratio": 4,
-                    "typeratio": "gains",
+                    "typeratio": "gain",
                     "unlocked": false
                 },
                 {
@@ -833,7 +833,7 @@ module.exports = {
                     "seuil": 1800,
                     "idcible": 3,
                     "ratio": 4,
-                    "typeratio": "gains",
+                    "typeratio": "gain",
                     "unlocked": false
                 },
                 {
@@ -842,7 +842,7 @@ module.exports = {
                     "seuil": 1900,
                     "idcible": 3,
                     "ratio": 4,
-                    "typeratio": "gains",
+                    "typeratio": "gain",
                     "unlocked": false
                 },
                 {
@@ -851,7 +851,7 @@ module.exports = {
                     "seuil": 2000,
                     "idcible": 3,
                     "ratio": 4,
-                    "typeratio": "gains",
+                    "typeratio": "gain",
                     "unlocked": false
                 },
             ],
@@ -874,7 +874,7 @@ module.exports = {
                     "seuil": 25,
                     "idcible": 4,
                     "ratio": 2,
-                    "typeratio": "gains",
+                    "typeratio": "gain",
                     "unlocked": false
                 },
                 {
@@ -883,7 +883,7 @@ module.exports = {
                     "seuil": 50,
                     "idcible": 4,
                     "ratio": 2,
-                    "typeratio": "gains",
+                    "typeratio": "gain",
                     "unlocked": false
                 },
                 {
@@ -892,7 +892,7 @@ module.exports = {
                     "seuil": 100,
                     "idcible": 4,
                     "ratio": 2,
-                    "typeratio": "gains",
+                    "typeratio": "gain",
                     "unlocked": false
                 },
                 {
@@ -901,7 +901,7 @@ module.exports = {
                     "seuil": 200,
                     "idcible": 4,
                     "ratio": 2,
-                    "typeratio": "gains",
+                    "typeratio": "gain",
                     "unlocked": false
                 },
                 {
@@ -910,7 +910,7 @@ module.exports = {
                     "seuil": 300,
                     "idcible": 4,
                     "ratio": 2,
-                    "typeratio": "gains",
+                    "typeratio": "gain",
                     "unlocked": false
                 },
                 {
@@ -919,7 +919,7 @@ module.exports = {
                     "seuil": 400,
                     "idcible": 4,
                     "ratio": 2,
-                    "typeratio": "gains",
+                    "typeratio": "gain",
                     "unlocked": false
                 },
                 {
@@ -928,7 +928,7 @@ module.exports = {
                     "seuil": 500,
                     "idcible": 4,
                     "ratio": 4,
-                    "typeratio": "gains",
+                    "typeratio": "gain",
                     "unlocked": false
                 },
                 {
@@ -937,7 +937,7 @@ module.exports = {
                     "seuil": 600,
                     "idcible": 4,
                     "ratio": 4,
-                    "typeratio": "gains",
+                    "typeratio": "gain",
                     "unlocked": false
                 },
                 {
@@ -946,7 +946,7 @@ module.exports = {
                     "seuil": 700,
                     "idcible": 4,
                     "ratio": 4,
-                    "typeratio": "gains",
+                    "typeratio": "gain",
                     "unlocked": false
                 },
                 {
@@ -955,7 +955,7 @@ module.exports = {
                     "seuil": 800,
                     "idcible": 4,
                     "ratio": 4,
-                    "typeratio": "gains",
+                    "typeratio": "gain",
                     "unlocked": false
                 },
                 {
@@ -964,7 +964,7 @@ module.exports = {
                     "seuil": 900,
                     "idcible": 4,
                     "ratio": 4,
-                    "typeratio": "gains",
+                    "typeratio": "gain",
                     "unlocked": false
                 },
                 {
@@ -973,7 +973,7 @@ module.exports = {
                     "seuil": 1000,
                     "idcible": 4,
                     "ratio": 5,
-                    "typeratio": "gains",
+                    "typeratio": "gain",
                     "unlocked": false
                 },
                 {
@@ -982,7 +982,7 @@ module.exports = {
                     "seuil": 1100,
                     "idcible": 4,
                     "ratio": 4,
-                    "typeratio": "gains",
+                    "typeratio": "gain",
                     "unlocked": false
                 },
                 {
@@ -991,7 +991,7 @@ module.exports = {
                     "seuil": 1200,
                     "idcible": 4,
                     "ratio": 4,
-                    "typeratio": "gains",
+                    "typeratio": "gain",
                     "unlocked": false
                 },
                 {
@@ -1000,7 +1000,7 @@ module.exports = {
                     "seuil": 1300,
                     "idcible": 4,
                     "ratio": 4,
-                    "typeratio": "gains",
+                    "typeratio": "gain",
                     "unlocked": false
                 },
                 {
@@ -1009,7 +1009,7 @@ module.exports = {
                     "seuil": 1400,
                     "idcible": 4,
                     "ratio": 4,
-                    "typeratio": "gains",
+                    "typeratio": "gain",
                     "unlocked": false
                 },
                 {
@@ -1018,7 +1018,7 @@ module.exports = {
                     "seuil": 1500,
                     "idcible": 4,
                     "ratio": 4,
-                    "typeratio": "gains",
+                    "typeratio": "gain",
                     "unlocked": false
                 },
                 {
@@ -1027,7 +1027,7 @@ module.exports = {
                     "seuil": 1600,
                     "idcible": 4,
                     "ratio": 4,
-                    "typeratio": "gains",
+                    "typeratio": "gain",
                     "unlocked": false
                 },
                 {
@@ -1036,7 +1036,7 @@ module.exports = {
                     "seuil": 1700,
                     "idcible": 4,
                     "ratio": 4,
-                    "typeratio": "gains",
+                    "typeratio": "gain",
                     "unlocked": false
                 },
                 {
@@ -1045,7 +1045,7 @@ module.exports = {
                     "seuil": 1800,
                     "idcible": 4,
                     "ratio": 4,
-                    "typeratio": "gains",
+                    "typeratio": "gain",
                     "unlocked": false
                 },
                 {
@@ -1054,7 +1054,7 @@ module.exports = {
                     "seuil": 1900,
                     "idcible": 4,
                     "ratio": 4,
-                    "typeratio": "gains",
+                    "typeratio": "gain",
                     "unlocked": false
                 },
                 {
@@ -1063,7 +1063,7 @@ module.exports = {
                     "seuil": 2000,
                     "idcible": 4,
                     "ratio": 4,
-                    "typeratio": "gains",
+                    "typeratio": "gain",
                     "unlocked": false
                 },
             ],
@@ -1086,7 +1086,7 @@ module.exports = {
                     "seuil": 25,
                     "idcible": 5,
                     "ratio": 2,
-                    "typeratio": "gains",
+                    "typeratio": "gain",
                     "unlocked": false
                 },
                 {
@@ -1095,7 +1095,7 @@ module.exports = {
                     "seuil": 50,
                     "idcible": 5,
                     "ratio": 2,
-                    "typeratio": "gains",
+                    "typeratio": "gain",
                     "unlocked": false
                 },
                 {
@@ -1104,7 +1104,7 @@ module.exports = {
                     "seuil": 100,
                     "idcible": 5,
                     "ratio": 2,
-                    "typeratio": "gains",
+                    "typeratio": "gain",
                     "unlocked": false
                 },
                 {
@@ -1113,7 +1113,7 @@ module.exports = {
                     "seuil": 200,
                     "idcible": 5,
                     "ratio": 2,
-                    "typeratio": "gains",
+                    "typeratio": "gain",
                     "unlocked": false
                 },
                 {
@@ -1122,7 +1122,7 @@ module.exports = {
                     "seuil": 300,
                     "idcible": 5,
                     "ratio": 2,
-                    "typeratio": "gains",
+                    "typeratio": "gain",
                     "unlocked": false
                 },
                 {
@@ -1131,7 +1131,7 @@ module.exports = {
                     "seuil": 400,
                     "idcible": 5,
                     "ratio": 2,
-                    "typeratio": "gains",
+                    "typeratio": "gain",
                     "unlocked": false
                 },
                 {
@@ -1140,7 +1140,7 @@ module.exports = {
                     "seuil": 500,
                     "idcible": 5,
                     "ratio": 4,
-                    "typeratio": "gains",
+                    "typeratio": "gain",
                     "unlocked": false
                 },
                 {
@@ -1149,7 +1149,7 @@ module.exports = {
                     "seuil": 600,
                     "idcible": 5,
                     "ratio": 4,
-                    "typeratio": "gains",
+                    "typeratio": "gain",
                     "unlocked": false
                 },
                 {
@@ -1158,7 +1158,7 @@ module.exports = {
                     "seuil": 700,
                     "idcible": 5,
                     "ratio": 4,
-                    "typeratio": "gains",
+                    "typeratio": "gain",
                     "unlocked": false
                 },
                 {
@@ -1167,7 +1167,7 @@ module.exports = {
                     "seuil": 800,
                     "idcible": 5,
                     "ratio": 4,
-                    "typeratio": "gains",
+                    "typeratio": "gain",
                     "unlocked": false
                 },
                 {
@@ -1176,7 +1176,7 @@ module.exports = {
                     "seuil": 900,
                     "idcible": 5,
                     "ratio": 4,
-                    "typeratio": "gains",
+                    "typeratio": "gain",
                     "unlocked": false
                 },
                 {
@@ -1185,7 +1185,7 @@ module.exports = {
                     "seuil": 1000,
                     "idcible": 5,
                     "ratio": 5,
-                    "typeratio": "gains",
+                    "typeratio": "gain",
                     "unlocked": false
                 },
                 {
@@ -1194,7 +1194,7 @@ module.exports = {
                     "seuil": 1100,
                     "idcible": 5,
                     "ratio": 4,
-                    "typeratio": "gains",
+                    "typeratio": "gain",
                     "unlocked": false
                 },
                 {
@@ -1203,7 +1203,7 @@ module.exports = {
                     "seuil": 1200,
                     "idcible": 5,
                     "ratio": 4,
-                    "typeratio": "gains",
+                    "typeratio": "gain",
                     "unlocked": false
                 },
                 {
@@ -1212,7 +1212,7 @@ module.exports = {
                     "seuil": 1300,
                     "idcible": 5,
                     "ratio": 4,
-                    "typeratio": "gains",
+                    "typeratio": "gain",
                     "unlocked": false
                 },
                 {
@@ -1221,7 +1221,7 @@ module.exports = {
                     "seuil": 1400,
                     "idcible": 5,
                     "ratio": 4,
-                    "typeratio": "gains",
+                    "typeratio": "gain",
                     "unlocked": false
                 },
                 {
@@ -1230,7 +1230,7 @@ module.exports = {
                     "seuil": 1500,
                     "idcible": 5,
                     "ratio": 4,
-                    "typeratio": "gains",
+                    "typeratio": "gain",
                     "unlocked": false
                 },
                 {
@@ -1239,7 +1239,7 @@ module.exports = {
                     "seuil": 1600,
                     "idcible": 5,
                     "ratio": 4,
-                    "typeratio": "gains",
+                    "typeratio": "gain",
                     "unlocked": false
                 },
                 {
@@ -1248,7 +1248,7 @@ module.exports = {
                     "seuil": 1700,
                     "idcible": 5,
                     "ratio": 4,
-                    "typeratio": "gains",
+                    "typeratio": "gain",
                     "unlocked": false
                 },
                 {
@@ -1257,7 +1257,7 @@ module.exports = {
                     "seuil": 1800,
                     "idcible": 5,
                     "ratio": 4,
-                    "typeratio": "gains",
+                    "typeratio": "gain",
                     "unlocked": false
                 },
                 {
@@ -1266,7 +1266,7 @@ module.exports = {
                     "seuil": 1900,
                     "idcible": 5,
                     "ratio": 4,
-                    "typeratio": "gains",
+                    "typeratio": "gain",
                     "unlocked": false
                 },
                 {
@@ -1275,7 +1275,7 @@ module.exports = {
                     "seuil": 2000,
                     "idcible": 5,
                     "ratio": 4,
-                    "typeratio": "gains",
+                    "typeratio": "gain",
                     "unlocked": false
                 },
             ],
@@ -1286,7 +1286,7 @@ module.exports = {
             "name": "SushiMan domine le monde",
             "logo": "icones/allUnlock.png",
             "seuil": 25,
-            "idcible": 0,
+            "idcible": 7,
             "ratio": 2,
             "typeratio": "gain",
             "unlocked": false

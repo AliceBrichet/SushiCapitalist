@@ -17,6 +17,8 @@ export class AppComponent {
   world: World = new World();
   server = WebserviceService.server;
   serverImage = WebserviceService.serverImage;
+  selectU = true;
+  selectA = false;
   qtmulti = '1';
   constructor(
     private service: WebserviceService,
@@ -43,8 +45,8 @@ export class AppComponent {
     this.world.money += data.p.revenu * data.producedQuantity * data.p.quantite;
   }
 
-  onPurchaseDone(cout: number) {
-    console.log(cout);
+  onPurchaseDone(cout: number, p: Product) {
+    this.checkUnlocks(p)
     this.world.money -= cout;
   }
 
@@ -102,32 +104,42 @@ export class AppComponent {
     palier.unlocked = true;
   }
 
+  checkUnlocks(p : Product) {
+    let unlocks = p.paliers.filter(u => 
+      u.seuil <= p.quantite &&
+      u.unlocked === false
+    )
+    if(unlocks) {
+        unlocks.forEach(u => this.apply(p, u))
+        //applyAllUnlocks(context)
+    }
+    console.log(p.revenu);
+  }
+
   getUnlocks() {
-    const products = this.world.products;
-    let list: Palier[] = [];
-
-    products.forEach((p) => {
-      list = list.concat(
-        p.paliers.filter((u) => p.quantite <= u.seuil && u.unlocked === false)
-      );
-    });
-
-    list.sort(function (a, b) {
-      return a.seuil - b.seuil;
-    });
-
-    return list;
-  }
-
-  getAllUnlocks() {
-    const products = this.world.products;
+    const products = this.world.products
+    if((!products.length))
+    {
+      return;
+    }
     const min = products.reduce((min, item) => {
-      return min < item.quantite ? item.quantite : min;
-    }, products[0].quantite);
+        return min < item.quantite ? item.quantite : min
+    }, products[0].quantite)
+    let list : Palier[] = [];
 
-    const list = this.world.allunlocks.filter(
-      (a) => a.seuil >= min && a.unlocked === false
-    );
+    if(this.selectU){
+      products.forEach(p => {
+        list = list.concat(p.paliers.filter(u =>
+          p.quantite <= u.seuil &&
+          u.unlocked === false
+        ))
+      })
+    } else if(this.selectA) {
+      list = this.world.allunlocks.filter(a => 
+        a.seuil >= min &&
+        a.unlocked === false
+    )
+    }
 
     list.sort(function (a, b) {
       return a.seuil - b.seuil;
@@ -136,7 +148,16 @@ export class AppComponent {
     return list;
   }
 
-  //Gestion unlock : créer une liste des unlock et des allUnlocks pour les affichers dans 2 onglets différents
+  unlockManagement(type: string) {
+      if(type === 'unlock') {
+        this.selectU = true;
+        this.selectA = false;
+      } else if(type === 'all') {
+        this.selectA = true;
+        this.selectU = false;
+      }
+  }
+
 
   popMessage(message: string): void {
     this.snackBar.open(message, '', { duration: 2000 });

@@ -73,7 +73,7 @@
                   class="tile is-child box"
                   [prod]="world.products[0]"
                   (notifyProduction)="onProductionDone($event)"
-                  (notifyPurchase)="onPurchaseDone($event)"
+                  (notifyPurchase)="onPurchaseDone($event, world.products[0])"
                 ></app-product>
                 <app-product
                   [qtmulti]="qtmulti"
@@ -81,7 +81,7 @@
                   class="tile is-child box"
                   [prod]="world.products[3]"
                   (notifyProduction)="onProductionDone($event)"
-                  (notifyPurchase)="onPurchaseDone($event)"
+                  (notifyPurchase)="onPurchaseDone($event, world.products[3])"
                 ></app-product>
               </div>
             </div>
@@ -93,7 +93,7 @@
                   class="tile is-child box"
                   [prod]="world.products[1]"
                   (notifyProduction)="onProductionDone($event)"
-                  (notifyPurchase)="onPurchaseDone($event)"
+                  (notifyPurchase)="onPurchaseDone($event, world.products[1])"
                 ></app-product>
                 <app-product
                   [qtmulti]="qtmulti"
@@ -101,7 +101,7 @@
                   class="tile is-child box"
                   [prod]="world.products[4]"
                   (notifyProduction)="onProductionDone($event)"
-                  (notifyPurchase)="onPurchaseDone($event)"
+                  (notifyPurchase)="onPurchaseDone($event, world.products[4])"
                 ></app-product>
               </div>
             </div>
@@ -113,7 +113,7 @@
                   class="tile is-child box"
                   [prod]="world.products[2]"
                   (notifyProduction)="onProductionDone($event)"
-                  (notifyPurchase)="onPurchaseDone($event)"
+                  (notifyPurchase)="onPurchaseDone($event, world.products[2])"
                 ></app-product>
                 <app-product
                   [qtmulti]="qtmulti"
@@ -121,7 +121,7 @@
                   class="tile is-child box"
                   [prod]="world.products[5]"
                   (notifyProduction)="onProductionDone($event)"
-                  (notifyPurchase)="onPurchaseDone($event)"
+                  (notifyPurchase)="onPurchaseDone($event, world.products[5])"
                 ></app-product>
               </div>
             </div>
@@ -236,22 +236,14 @@
           <div class="modal-background"></div>
           <div class="modal-card">
             <header class="modal-card-head has-background-warning-light">
-              <p class="modal-card-title is-size-3">Unlocks</p>
-              <button
-                (click)="show(false, 'unlocks')"
-                class="delete"
-                aria-label="close"
-              ></button>
-            </header>
-            <!--<header class="modal-card-head has-background-warning-light">
-              <div class="tabs is-large">
-                <ul>
-                  <li class="is-active"><a>Unlocks</a></li>
-                  <li><a>AllUnlocks</a></li>
+              <div class="unlocksTabs">
+                <ul class="unlocksTabs">
+                  <li class="title is-size-3 unlockTitle" (click)="unlockManagement('unlock')" [ngClass]="selectU ? 'success' : 'danger'"><a>Unlocks</a></li>
+                  <li class="title is-size-3 unlockTitle" (click)="unlockManagement('all')" [ngClass]="selectA ? 'success' : 'danger'"><a>AllUnlocks</a></li>
                 </ul>
               </div>
-              <button (click)="show(false, 'unlocks')" class="delete" aria-label="close"></button>
-            </header>-->
+              <button (click)="show(false, 'unlocks')" class="delete position" aria-label="close"></button>
+            </header>
             <section class="modal-card-body backgroundModal">
               <div class="tile is-vertical">
                 <div *ngFor="let unlock of getUnlocks()">
@@ -270,6 +262,20 @@
                             {{ unlock.name }}
                           </div>
                           <hr />
+                          <div *ngIf="unlock.idcible === 7">
+                            <div class="is-center is-margin-bottom title is-light is-6">
+                              Augmente le {{ unlock.typeratio }} par
+                              {{ unlock.ratio }} de la préparation de 
+                              toutes les industries !
+                            </div>
+                          </div>
+                          <div *ngIf="unlock.idcible !== 7">
+                            <div class="is-center is-margin-bottom title is-light is-6">
+                              Augmente le {{ unlock.typeratio }} par
+                              {{ unlock.ratio }} de la préparation des 
+                              {{ world.products[unlock.idcible].name }} !
+                            </div>
+                          </div>
                           <button
                             class="button-53 disabled has-background-warning-light"
                             role="button"
