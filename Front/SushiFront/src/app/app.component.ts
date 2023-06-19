@@ -5,6 +5,7 @@ import { ProductComponent } from './product/product.component';
 import { Orientation } from './my-progress-bar/my-progress-bar.component';
 import { MaxLengthValidator } from '@angular/forms';
 import { MatSnackBar } from '@angular/material/snack-bar';
+import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-root',
@@ -17,16 +18,22 @@ export class AppComponent {
   world: World = new World();
   server = WebserviceService.server;
   serverImage = WebserviceService.serverImage;
-  selectU = true;
-  selectA = false;
+  username : string | null = "Masteriz" + Math.floor(Math.random() * 10000);
+  selectUnlock = true;
+  selectAllUnlock = false;
+  selectAngel = true;
+  selectUpgradeAngel = false;
   qtmulti = '1';
   constructor(
     private service: WebserviceService,
-    private snackBar: MatSnackBar
+    private snackBar: MatSnackBar,
+    private form: FormsModule
   ) {
-    service.getWorld().then((world) => {
-      this.world = world.data.getWorld;
-    });
+      this.username = localStorage.getItem("username");
+      this.username ? this.service.setUser(this.username) : '';
+      service.getWorld().then((world) => {
+        this.world = world.data.getWorld;
+      });
   }
 
   show(state: boolean, route: string) {
@@ -36,6 +43,16 @@ export class AppComponent {
     } else {
       el?.classList.remove('is-active');
     }
+  }
+
+  onUsernameChanged(event: Event)
+  {
+    let target = event.target as HTMLInputElement
+    if (target) {
+      this.username = target.value;
+      this.service.setUser(this.username)
+      localStorage.setItem("username", this.username);
+    } 
   }
 
   onProductionDone(data: { producedQuantity: number; p: Product }) {
@@ -76,6 +93,7 @@ export class AppComponent {
       this.popMessage(
         'Le manager ' + manager.name + ' a été engagé avec succès!'
       );
+      this.service.engagerManager(manager).catch(reason => console.log("erreur: " + reason) );
     } else {
       throw new Error(
         `Le monde ne possède pas assez d'argent pour engager ce manager`
@@ -88,13 +106,14 @@ export class AppComponent {
       this.world.money -= upgrade.seuil;
 
       const product = this.world.products[upgrade.idcible];
-      this.apply(product, upgrade);
+      this.apply(product, upgrade, 'upgrade');
 
       this.popMessage("L'upgrade " + upgrade.name + ' a bien été acheté !');
+      this.service.acheterCashUpgrade(upgrade).catch(reason => console.log("erreur: " + reason));
     }
   }
 
-  apply(product: Product, palier: Palier) {
+  apply(product: Product, palier: Palier, from: string) {
     if (palier.typeratio === 'gain') {
       product.revenu *= palier.ratio;
     } else if (palier.typeratio === 'vitesse') {
@@ -102,6 +121,18 @@ export class AppComponent {
       product.timeleft /= palier.ratio;
     }
     palier.unlocked = true;
+
+    if(from === 'upgrade')
+    {
+      this.popMessage(
+        "L'upgrade " + palier.name + " a été achetée avec succès!"
+      );
+    } else if(from === 'unlock')
+    {
+      this.popMessage(
+        "L'unlock " + palier.name + " vient d'être débloqué!"
+      );
+    }
   }
 
   checkUnlocks(p : Product) {
@@ -110,7 +141,7 @@ export class AppComponent {
       u.unlocked === false
     )
     if(unlocks) {
-        unlocks.forEach(u => this.apply(p, u))
+        unlocks.forEach(u => this.apply(p, u, 'unlock'))
         //applyAllUnlocks(context)
     }
     console.log(p.revenu);
@@ -127,14 +158,14 @@ export class AppComponent {
     }, products[0].quantite)
     let list : Palier[] = [];
 
-    if(this.selectU){
+    if(this.selectUnlock){
       products.forEach(p => {
         list = list.concat(p.paliers.filter(u =>
           p.quantite <= u.seuil &&
           u.unlocked === false
         ))
       })
-    } else if(this.selectA) {
+    } else if(this.selectAllUnlock) {
       list = this.world.allunlocks.filter(a => 
         a.seuil >= min &&
         a.unlocked === false
@@ -150,11 +181,21 @@ export class AppComponent {
 
   unlockManagement(type: string) {
       if(type === 'unlock') {
-        this.selectU = true;
-        this.selectA = false;
+        this.selectUnlock = true;
+        this.selectAllUnlock = false;
       } else if(type === 'all') {
-        this.selectA = true;
-        this.selectU = false;
+        this.selectAllUnlock = true;
+        this.selectUnlock = false;
+      }
+  }
+
+  angelManagement(type: string) {
+    if(type === 'reset') {
+        this.selectAngel = true;
+        this.selectUpgradeAngel = false;
+      } else if(type === 'upgrade') {
+        this.selectUpgradeAngel = true;
+        this.selectAngel = false;
       }
   }
 

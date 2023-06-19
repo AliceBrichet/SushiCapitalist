@@ -4,8 +4,8 @@ const fs = require('fs')
 
 function saveWorld(context) {
     var fs = require('fs')
+    context.world.money = calcScore(context),
     context.world.lastupdate = Date.now(),
-    calcScore(context),
     fs.writeFile("userworlds/" + context.user + "-world.json",
     JSON.stringify(context.world), err => {
         if (err) {
@@ -43,7 +43,7 @@ function calcScore(context) {
 }
 
 function applyUnlock(product, unlock) {
-    if(unlock.typeratio === 'gains') {
+    if(unlock.typeratio === 'gain') {
         product.revenu *= unlock.ratio
     }
     else if(unlock.typeratio === 'vitesse') {
@@ -53,12 +53,13 @@ function applyUnlock(product, unlock) {
     unlock.unlocked = true
 }
 
-function checkUnlocks(p) {
+function checkUnlocks(context, p) {
     unlocks = p.paliers.filter(u => 
         u.seuil <= p.quantite &&
         u.unlocked === false
     )
-    if(unlocks) {
+
+    if(unlocks.length) {
         unlocks.forEach(u => applyUnlock(p, u))
         applyAllUnlocks(context)
     }
@@ -98,8 +99,8 @@ module.exports = {
                     `Le produit avec l'id ${args.id} n'existe pas`
                 )
             }
-            p.quantite+=args.quantite
-            checkUnlocks(p)
+            p.quantite=args.quantite
+            checkUnlocks(context, p)
             context.world.money-=p.cout
             p.cout = p.cout*p.croissance
             saveWorld(context)

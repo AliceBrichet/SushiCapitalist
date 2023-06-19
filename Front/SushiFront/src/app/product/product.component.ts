@@ -8,6 +8,7 @@ import {
 } from '../my-progress-bar/my-progress-bar.component';
 import { AppComponent } from '../app.component';
 import { BigvaluePipe } from '../bigvalue.pipe';
+import { Injectable } from '@angular/core';
 import { map, takeWhile, timer } from 'rxjs';
 
 @Component({
@@ -50,6 +51,10 @@ export class ProductComponent implements OnInit {
 
   @Output() notifyPurchase: EventEmitter<number> = new EventEmitter<number>();
 
+  constructor(
+    private service: WebserviceService,
+  ) {}
+
   subtitles(): string {
     switch (this.product.name) {
       case 'Sashimi':
@@ -79,9 +84,9 @@ export class ProductComponent implements OnInit {
   startFabrication() {
     if (this.product.quantite > 0) {
       this.product.timeleft = this.product.vitesse;
-      // console.log(this.product);
       this.product.lastupdate = Date.now();
       this.run = true;
+      this.service.lancerProduction(this.product).catch(reason => console.log("erreur: " + reason) );
     }
   }
   ngOnInit() {
@@ -165,6 +170,7 @@ export class ProductComponent implements OnInit {
     this.product.cout =
       this.product.cout *
       Math.pow(this.product.croissance, this.multiplicateur);
+    this.service.acheterQtProduit(this.product).catch(reason => console.log("erreur: " + reason) );
     this.notifyPurchase.emit(this.coutNProduct);
   }
 }

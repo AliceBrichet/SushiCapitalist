@@ -120,14 +120,14 @@ a:hover {
     animation-duration: 0.4s;
 }
 
-.unlocksTabs {
+.tabs {
     display: flex;
     justify-content: space-around;
     width: 100%;
     padding: 5px;
 }
 
-.unlockTitle {
+.tabsTitle {
     margin-bottom: 0px;
 }
 
@@ -207,5 +207,5 @@ a:hover {
    
 #worldname {
     font-family: Osake-sushi;
-    font-size: 4em;
+    font-size: 3em;
 }

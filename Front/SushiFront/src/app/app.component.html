@@ -14,7 +14,7 @@
             <span [innerHTML]="world.money | bigvalue"> </span>
              ¥
           </div>
-          <div class="column">
+          <div class="column mr-5">
             <button
               id="multiplicateur"
               class="button-53"
@@ -32,6 +32,8 @@
               <div class="column">
                 <input
                   class="input player"
+                  [(ngModel)]="username" 
+                  (change)="onUsernameChanged($event)"
                   type="text"
                   placeholder="Player ID"
                 />
@@ -58,6 +60,14 @@
                   class="button is-danger"
                 >
                   Managers
+                </button>
+              </div>
+              <div class="column">
+                <button
+                  (click)="show(true, 'angels')"
+                  class="button is-danger"
+                >
+                  Angels
                 </button>
               </div>
             </div>
@@ -236,10 +246,10 @@
           <div class="modal-background"></div>
           <div class="modal-card">
             <header class="modal-card-head has-background-warning-light">
-              <div class="unlocksTabs">
-                <ul class="unlocksTabs">
-                  <li class="title is-size-3 unlockTitle" (click)="unlockManagement('unlock')" [ngClass]="selectU ? 'success' : 'danger'"><a>Unlocks</a></li>
-                  <li class="title is-size-3 unlockTitle" (click)="unlockManagement('all')" [ngClass]="selectA ? 'success' : 'danger'"><a>AllUnlocks</a></li>
+              <div class="tabs">
+                <ul class="tabs">
+                  <li class="title is-size-3 tabsTitle" (click)="unlockManagement('unlock')" [ngClass]="selectUnlock ? 'success' : 'danger'"><a>Unlocks</a></li>
+                  <li class="title is-size-3 tabsTitle" (click)="unlockManagement('all')" [ngClass]="selectAllUnlock ? 'success' : 'danger'"><a>AllUnlocks</a></li>
                 </ul>
               </div>
               <button (click)="show(false, 'unlocks')" class="delete position" aria-label="close"></button>
@@ -288,6 +298,66 @@
                     </div>
                   </div>
                 </div>
+              </div>
+            </section>
+          </div>
+        </div>
+        <div class="modal" id="angels">
+          <div class="modal-background"></div>
+          <div class="modal-card">
+            <header class="modal-card-head has-background-warning-light">
+              <div class="tabs">
+                <ul class="tabs">
+                  <li class="title is-size-3 tabsTitle" (click)="angelManagement('reset')" [ngClass]="selectAngel ? 'success' : 'danger'"><a>Angels</a></li>
+                  <li class="title is-size-3 tabsTitle" (click)="angelManagement('upgrade')" [ngClass]="selectUpgradeAngel ? 'success' : 'danger'"><a>Upgrades</a></li>
+                </ul>
+              </div>
+              <button (click)="show(false, 'angels')" class="delete position" aria-label="close"></button>
+            </header>
+            <section class="modal-card-body backgroundModal">
+              <div class="tile is-vertical">
+                <!--<div *ngFor="let unlock of getUnlocks()">
+                  <div *ngIf="!unlock.unlocked">
+                    <div class="tile is-parent">
+                      <article
+                        class="tile columns is-child notification is-success"
+                      >
+                        <figure
+                          class="product dot has-background-warning-light image is-64x64"
+                        >
+                          <img [attr.src]="serverImage + unlock.logo" />
+                        </figure>
+                        <div class="column is-8">
+                          <div class="is-center title manager-title is-4">
+                            {{ unlock.name }}
+                          </div>
+                          <hr />
+                          <div *ngIf="unlock.idcible === 7">
+                            <div class="is-center is-margin-bottom title is-light is-6">
+                              Augmente le {{ unlock.typeratio }} par
+                              {{ unlock.ratio }} de la préparation de 
+                              toutes les industries !
+                            </div>
+                          </div>
+                          <div *ngIf="unlock.idcible !== 7">
+                            <div class="is-center is-margin-bottom title is-light is-6">
+                              Augmente le {{ unlock.typeratio }} par
+                              {{ unlock.ratio }} de la préparation des 
+                              {{ world.products[unlock.idcible].name }} !
+                            </div>
+                          </div>
+                          <button
+                            class="button-53 disabled has-background-warning-light"
+                            role="button"
+                          >
+                            <p>Se débloque à</p>
+                            <p [innerHTML]="unlock.seuil"></p>
+                          </button>
+                        </div>
+                      </article>
+                    </div>
+                  </div>
+                </div>-->
               </div>
             </section>
           </div>
