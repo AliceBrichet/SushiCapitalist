@@ -3,7 +3,15 @@
     src: url(../assets/Osake-x3oqj.otf);
   }
 @import url(button.scss);
-
+#multiplicateur {
+    font-family: Osake-sushi;
+    background-color: #fdc3cf;
+}
+.money {
+    font-family: Osake-sushi;
+    font-size: 5em;
+    color: #fdc3cf
+}
 .background {
     background-image: url("../assets/restaurant80.jpg");
 }
@@ -11,6 +19,23 @@
 .backgroundModal {
     background-image: url("../assets/fullOnigiri.png");
 }
+
+.player {
+    border: none;
+    border-radius: 5px;
+    padding: 15px;
+    background-color:#ff496e;
+    box-shadow: 4px 4px 4px #bb3a54,
+                -4px -4px 4px #fdc3cf;
+    font-size: medium;
+    font-weight: bold;
+    max-width: 200px;
+   }
+   
+   .player:focus {
+    outline-color: white;
+    place-content: "Enter your name!";
+   }
 
 app-product {
     background-color: hsla(0, 0%, 100%, 0.75);
@@ -33,7 +58,10 @@ hr {
 .logo {
     position: relative;
 }
-
+ #multiplicateur{
+    font-size: 2em;
+ }
+ 
 .hero-body {
     padding: 1.5em;
 }
@@ -96,7 +124,7 @@ hr {
     color: #41403e;
     cursor: pointer;
     display: inline-block;
-    font-family: Osake;
+    font-family: Osake-sushi;
     font-size: 1rem;
     line-height: 50px;
     outline: none;
@@ -140,5 +168,5 @@ hr {
    
 #worldname {
     font-family: Osake-sushi;
-    font-size: 5rem;
+    font-size: 4em;
 }

@@ -1,34 +1,41 @@
 <body>
+  <audio autoplay loop src="../assets/chihiro.mp3"></audio>
   <div class="hero is-fullheight background" *ngIf="world">
     <div class="hero-head">
       <section class="hero is-danger">
         <div class="columns is-vcentered">
-          <div class="hero-body column is-two-thirds">
+          <div class="hero-body column is-half">
             <figure class="product image is-128x128">
               <img class="is-square" [attr.src]="serverImage + world.logo" />
             </figure>
             <span id="worldname" class="title"> {{ world.name }} </span>
           </div>
-          <div class="column">
-            argent
+          <div class="column is-one-third has-text-centered money">
             <span [innerHTML]="world.money | bigvalue"> </span>
+             ¥
           </div>
           <div class="column">
             <button
               id="multiplicateur"
-              class="button-55"
+              class="button-53"
               (click)="changeCommutateur()"
             >
               {{ qtmulti }}
             </button>
           </div>
-          <div class="column">ID du joueur</div>
         </div>
       </section>
       <div class="main columns">
         <div class="hero column is-1 is-danger is-fullheight">
           <div class="hero-head">
             <div class="columns is-multiline">
+              <div class="column">
+                <input
+                  class="input player"
+                  type="text"
+                  placeholder="Player ID"
+                />
+              </div>
               <div class="column">
                 <button
                   (click)="show(true, 'unlocks')"

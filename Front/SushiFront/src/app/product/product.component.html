@@ -1,10 +1,10 @@
 <div *ngIf="product">
-  <article [ngClass]="{ locked: product.quantite < 1 }">
+  <article  class="column" [ngClass]="{ locked: product.quantite < 1 }">
     <p class="title" id="productname">{{ product.name }}</p>
-    <p class="subtitle has-text-danger">マキ</p>
+    <p class="subtitle has-text-danger">{{ subtitles() }}</p>
     <div class="columns">
-      <div class="column">
-        <div>{{ worldMoney }}</div>
+      <div>
+        <div class="compteur">{{ this.product.quantite }}</div>
         <figure class="frame image circle">
           <img src="../../assets/frame.png" />
         </figure>
@@ -18,9 +18,14 @@
           role="button"
           (click)="buyProduct()"
         >
-          You {{ can }} buy {{ multiplicateur }} because it costs
-          {{ coutNProduct }}
+          Buy {{ multiplicateur }} <br />
+          {{ coutNProduct | number : "1.2-2" }}
         </button>
+        <!-- <countdown
+          #cd
+          [config]="{ leftTime: this.product.vitesse }"
+          (event)="startFabrication()"
+        ></countdown> -->
       </div>
     </div>
     <div>

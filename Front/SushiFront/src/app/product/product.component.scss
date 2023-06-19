@@ -1,3 +1,10 @@
+@font-face {
+  font-family: Osake-sushi;
+  src: url(../../assets/Osake-x3oqj.otf);
+}
+.subtitle {
+  font-size: 2em;
+}
 .product {
     position : absolute;
     margin-left: 35px;
@@ -13,7 +20,10 @@
 .frame {
     position: relative;
 }
-
+ .compteur {
+  font-family: Osake-sushi;
+  font-size: 2em;
+ }
 .circle {
     height: 180px;
     width: 180px;
@@ -27,7 +37,7 @@ article:hover
 }
 article:active {
     .product:active{
-        transform: scale(1);
+        transform: scale(3);
     }
   }
 
@@ -46,7 +56,7 @@ article:active {
     color: #41403e;
     cursor: pointer;
     display: inline-block;
-    font-family: Osake;
+    font-family: Roboto;
     font-size: 1rem;
     line-height: 50px;
     outline: none;
@@ -75,8 +85,4 @@ article:active {
     background-color: #eae8e5;
     pointer-events: none;
 
-  }
-
-  .locked {
-      pointer-events: none;
   }

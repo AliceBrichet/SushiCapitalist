@@ -1,12 +1,14 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { Product } from '../world';
 import { WebserviceService } from '../webservice.service';
+// import { CountdownModule } from 'ngx-countdown';
 import {
   MyProgressBarComponent,
   Orientation,
 } from '../my-progress-bar/my-progress-bar.component';
 import { AppComponent } from '../app.component';
 import { BigvaluePipe } from '../bigvalue.pipe';
+import { map, takeWhile, timer } from 'rxjs';
 
 @Component({
   selector: 'app-product',
@@ -24,6 +26,7 @@ export class ProductComponent implements OnInit {
   worldMoney = 0;
   worldQtmulti = '';
   can = 'can';
+  subtitle = '';
   product: Product = new Product();
   multiplicateur = 0;
   buttonBuy = '';
@@ -47,6 +50,32 @@ export class ProductComponent implements OnInit {
 
   @Output() notifyPurchase: EventEmitter<number> = new EventEmitter<number>();
 
+  subtitles(): string {
+    switch (this.product.name) {
+      case 'Sashimi':
+        this.subtitle = '刺身';
+        break;
+      case 'Maki':
+        this.subtitle = 'マキ';
+        break;
+      case 'Sushi':
+        this.subtitle = '寿司';
+        break;
+      case 'Miso':
+        this.subtitle = 'みそ汁';
+        break;
+      case 'Onigiri':
+        this.subtitle = 'おにぎり';
+        break;
+      case 'Plateau':
+        this.subtitle = '高原';
+        break;
+      default:
+        this.subtitle = '⋄⋄⋄⋄⋄⋄';
+    }
+    return this.subtitle;
+  }
+
   startFabrication() {
     if (this.product.quantite > 0) {
       this.product.timeleft = this.product.vitesse;
@@ -55,7 +84,6 @@ export class ProductComponent implements OnInit {
       this.run = true;
     }
   }
-
   ngOnInit() {
     setInterval(() => {
       this.calcScore();
@@ -63,7 +91,6 @@ export class ProductComponent implements OnInit {
       // console.log(this.producedQuantity);
     }, 100);
   }
-
   calcScore() {
     if (!this.product) return;
     const currentTime = Date.now();
