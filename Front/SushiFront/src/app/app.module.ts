@@ -7,6 +7,7 @@ import { BigvaluePipe } from './bigvalue.pipe';
 import { MyProgressBarComponent } from './my-progress-bar/my-progress-bar.component';
 import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
+import { MatBadgeModule } from '@angular/material/badge';
 import { FormsModule } from '@angular/forms';
 //import { CountdownModule } from 'ngx-countdown';
 
@@ -23,6 +24,7 @@ import { FormsModule } from '@angular/forms';
     AppRoutingModule,
     NoopAnimationsModule,
     MatSnackBarModule,
+    MatBadgeModule,
     FormsModule,
   ],
   providers: [],

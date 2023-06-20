@@ -86,7 +86,6 @@ export class ProductComponent implements OnInit {
       this.product.timeleft = this.product.vitesse;
       this.product.lastupdate = Date.now();
       this.run = true;
-      this.service.lancerProduction(this.product).catch(reason => console.log("erreur: " + reason) );
     }
   }
   ngOnInit() {
@@ -170,7 +169,6 @@ export class ProductComponent implements OnInit {
     this.product.cout =
       this.product.cout *
       Math.pow(this.product.croissance, this.multiplicateur);
-    this.service.acheterQtProduit(this.product).catch(reason => console.log("erreur: " + reason) );
     this.notifyPurchase.emit(this.coutNProduct);
   }
 }
