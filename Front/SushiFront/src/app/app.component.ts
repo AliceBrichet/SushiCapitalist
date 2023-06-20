@@ -18,7 +18,7 @@ export class AppComponent {
   world: World = new World();
   server = WebserviceService.server;
   serverImage = WebserviceService.serverImage;
-  username : string | null = "Masteriz" + Math.floor(Math.random() * 10000);
+  username: string | null = 'Masteriz' + Math.floor(Math.random() * 10000);
   selectUnlock = true;
   selectAllUnlock = false;
   selectAngel = true;
@@ -31,11 +31,11 @@ export class AppComponent {
     private snackBar: MatSnackBar,
     private form: FormsModule
   ) {
-      this.username = localStorage.getItem("username");
-      this.username ? this.service.setUser(this.username) : '';
-      service.getWorld().then((world) => {
-        this.world = world.data.getWorld;
-      });
+    this.username = localStorage.getItem('username');
+    this.username ? this.service.setUser(this.username) : '';
+    service.getWorld().then((world) => {
+      this.world = world.data.getWorld;
+    });
   }
 
   ngOnInit(){
@@ -56,16 +56,19 @@ export class AppComponent {
     }
   }
 
-  onUsernameChanged(event: Event)
-  {
-    let target = event.target as HTMLInputElement
+  onUsernameChanged(event: Event) {
+    const target = event.target as HTMLInputElement;
     if (target) {
       this.username = target.value;
-      this.service.setUser(this.username)
-      localStorage.setItem("username", this.username);
-    } 
+      this.service.setUser(this.username);
+      localStorage.setItem('username', this.username);
+    }
   }
 
+  /**unlock(p: number) {
+    this.world.money -= this.world.products[p].cout;
+    this.world.products[p].quantite += 1;
+  }**/
   onProductionDone(data: { producedQuantity: number; p: Product }) {
     this.world.money += data.p.revenu * data.producedQuantity * data.p.quantite;
     this.service.lancerProduction(data.p).catch(reason => console.log("erreur: " + reason) );
@@ -73,7 +76,7 @@ export class AppComponent {
   }
 
   onPurchaseDone(cout: number, p: Product) {
-    this.checkUnlocks(p)
+    this.checkUnlocks(p);
     this.world.money -= cout;
     this.service.acheterQtProduit(p).catch(reason => console.log("erreur: " + reason) );
   }
@@ -121,7 +124,9 @@ export class AppComponent {
       this.apply(product, upgrade, 'upgrade');
 
       this.popMessage("L'upgrade " + upgrade.name + ' a bien été acheté !');
-      this.service.acheterCashUpgrade(upgrade).catch(reason => console.log("erreur: " + reason));
+      this.service
+        .acheterCashUpgrade(upgrade)
+        .catch((reason) => console.log('erreur: ' + reason));
     }
   }
 
@@ -134,16 +139,12 @@ export class AppComponent {
     }
     palier.unlocked = true;
 
-    if(from === 'upgrade')
-    {
+    if (from === 'upgrade') {
       this.popMessage(
-        "L'upgrade " + palier.name + " a été achetée avec succès!"
+        "L'upgrade " + palier.name + ' a été achetée avec succès!'
       );
-    } else if(from === 'unlock')
-    {
-      this.popMessage(
-        "L'unlock " + palier.name + " vient d'être débloqué!"
-      );
+    } else if (from === 'unlock') {
+      this.popMessage("L'unlock " + palier.name + " vient d'être débloqué!");
     }
   }
 
@@ -182,28 +183,25 @@ export class AppComponent {
   }
 
   getUnlocks() {
-    const products = this.world.products
-    if((!products.length))
-    {
+    const products = this.world.products;
+    if (!products.length) {
       return;
     }
     const min = products.reduce((min, item) => {
-        return min < item.quantite ? item.quantite : min
-    }, products[0].quantite)
-    let list : Palier[] = [];
+      return min < item.quantite ? item.quantite : min;
+    }, products[0].quantite);
+    let list: Palier[] = [];
 
-    if(this.selectUnlock){
-      products.forEach(p => {
-        list = list.concat(p.paliers.filter(u =>
-          p.quantite <= u.seuil &&
-          u.unlocked === false
-        ))
-      })
-    } else if(this.selectAllUnlock) {
-      list = this.world.allunlocks.filter(a => 
-        a.seuil >= min &&
-        a.unlocked === false
-    )
+    if (this.selectUnlock) {
+      products.forEach((p) => {
+        list = list.concat(
+          p.paliers.filter((u) => p.quantite <= u.seuil && u.unlocked === false)
+        );
+      });
+    } else if (this.selectAllUnlock) {
+      list = this.world.allunlocks.filter(
+        (a) => a.seuil >= min && a.unlocked === false
+      );
     }
 
     list.sort(function (a, b) {
@@ -214,25 +212,24 @@ export class AppComponent {
   }
 
   unlockManagement(type: string) {
-      if(type === 'unlock') {
-        this.selectUnlock = true;
-        this.selectAllUnlock = false;
-      } else if(type === 'all') {
-        this.selectAllUnlock = true;
-        this.selectUnlock = false;
-      }
+    if (type === 'unlock') {
+      this.selectUnlock = true;
+      this.selectAllUnlock = false;
+    } else if (type === 'all') {
+      this.selectAllUnlock = true;
+      this.selectUnlock = false;
+    }
   }
 
   angelManagement(type: string) {
-    if(type === 'reset') {
-        this.selectAngel = true;
-        this.selectUpgradeAngel = false;
-      } else if(type === 'upgrade') {
-        this.selectUpgradeAngel = true;
-        this.selectAngel = false;
-      }
+    if (type === 'reset') {
+      this.selectAngel = true;
+      this.selectUpgradeAngel = false;
+    } else if (type === 'upgrade') {
+      this.selectUpgradeAngel = true;
+      this.selectAngel = false;
+    }
   }
-
 
   popMessage(message: string): void {
     this.snackBar.open(message, '', { duration: 2000 });
