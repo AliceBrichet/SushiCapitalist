@@ -7,6 +7,9 @@
     font-family: Osake-sushi;
     background-color: #fdc3cf;
 }
+/**.box{
+    height: 400px;
+}**/
 .money {
     font-family: Osake-sushi;
     font-size: 5em;
@@ -19,7 +22,15 @@
 .backgroundModal {
     background-image: url("../assets/fullOnigiri.png");
 }
-
+.figure {
+    position: absolute;
+}
+.text {
+    font-family: Osake-sushi;
+    color:#000000;
+    font-size: 2em;
+    position: relative;
+}
 .player {
     border: none;
     border-radius: 5px;
