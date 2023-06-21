@@ -49,6 +49,8 @@
               <div class="column">
                 <button
                   (click)="show(true, 'upgrades')"
+                  [matBadge]="badgeUpgrades"
+                  [matBadgeHidden]="badgeUpgrades==0"
                   class="button is-danger"
                 >
                   Upgrades
@@ -57,6 +59,8 @@
               <div class="column">
                 <button
                   (click)="show(true, 'managers')"
+                  [matBadge]="badgeManagers"
+                  [matBadgeHidden]="badgeManagers==0"
                   class="button is-danger"
                 >
                   Managers
@@ -303,7 +307,7 @@
           </div>
         </div>
         <div class="modal" id="angels">
-          <div class="modal-background"></div>
+          <div class="modal-background-angel"></div>
           <div class="modal-card">
             <header class="modal-card-head has-background-warning-light">
               <div class="tabs">
@@ -314,51 +318,13 @@
               </div>
               <button (click)="show(false, 'angels')" class="delete position" aria-label="close"></button>
             </header>
-            <section class="modal-card-body backgroundModal">
-              <div class="tile is-vertical">
-                <!--<div *ngFor="let unlock of getUnlocks()">
-                  <div *ngIf="!unlock.unlocked">
-                    <div class="tile is-parent">
-                      <article
-                        class="tile columns is-child notification is-success"
-                      >
-                        <figure
-                          class="product dot has-background-warning-light image is-64x64"
-                        >
-                          <img [attr.src]="serverImage + unlock.logo" />
-                        </figure>
-                        <div class="column is-8">
-                          <div class="is-center title manager-title is-4">
-                            {{ unlock.name }}
-                          </div>
-                          <hr />
-                          <div *ngIf="unlock.idcible === 7">
-                            <div class="is-center is-margin-bottom title is-light is-6">
-                              Augmente le {{ unlock.typeratio }} par
-                              {{ unlock.ratio }} de la préparation de 
-                              toutes les industries !
-                            </div>
-                          </div>
-                          <div *ngIf="unlock.idcible !== 7">
-                            <div class="is-center is-margin-bottom title is-light is-6">
-                              Augmente le {{ unlock.typeratio }} par
-                              {{ unlock.ratio }} de la préparation des 
-                              {{ world.products[unlock.idcible].name }} !
-                            </div>
-                          </div>
-                          <button
-                            class="button-53 disabled has-background-warning-light"
-                            role="button"
-                          >
-                            <p>Se débloque à</p>
-                            <p [innerHTML]="unlock.seuil"></p>
-                          </button>
-                        </div>
-                      </article>
-                    </div>
-                  </div>
-                </div>-->
+            <section class="modal-card-body px-0 mx-0 backgroundModalAngel">
+              <div class="column content-is-centered text">
+                no investors in sight...
               </div>
+              <figure>
+                <img src="../assets/angel.png" />
+              </figure>
             </section>
           </div>
         </div>

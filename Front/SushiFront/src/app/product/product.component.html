@@ -1,5 +1,5 @@
 <div *ngIf="product">
-  <article  class="column" [ngClass]="{ locked: product.quantite < 1 }">
+  <article  class="column">
     <p class="title" id="productname">{{ product.name }}</p>
     <p class="subtitle has-text-danger">{{ subtitles() }}</p>
     <div class="columns">

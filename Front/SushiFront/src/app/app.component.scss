@@ -20,6 +20,22 @@
     background-image: url("../assets/fullOnigiri.png");
 }
 
+.mat-badge-content {
+    background: #fffaeb;
+    color: black;
+}
+
+.figure {
+    position: absolute;
+}
+
+.text {
+    font-family: Osake-sushi;
+    color:#000000;
+    font-size: 2em;
+    position: relative;
+}
+
 .player {
     border: none;
     border-radius: 5px;

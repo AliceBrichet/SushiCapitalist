@@ -23,6 +23,8 @@ export class AppComponent {
   selectAllUnlock = false;
   selectAngel = true;
   selectUpgradeAngel = false;
+  badgeManagers = 0;
+  badgeUpgrades = 0;
   qtmulti = '1';
   constructor(
     private service: WebserviceService,
@@ -56,15 +58,15 @@ export class AppComponent {
   }
 
   onProductionDone(data: { producedQuantity: number; p: Product }) {
-    console.log(this.world.money);
-    console.log(data.p.revenu);
-    console.log(data.p.quantite);
     this.world.money += data.p.revenu * data.producedQuantity * data.p.quantite;
+    this.service.lancerProduction(data.p).catch(reason => console.log("erreur: " + reason) );
+    this.checkBadge();
   }
 
   onPurchaseDone(cout: number, p: Product) {
-    this.checkUnlocks(p)
+    this.checkUnlocks(p);
     this.world.money -= cout;
+    this.service.acheterQtProduit(p).catch(reason => console.log("erreur: " + reason) );
   }
 
   changeCommutateur() {
@@ -93,6 +95,7 @@ export class AppComponent {
       this.popMessage(
         'Le manager ' + manager.name + ' a été engagé avec succès!'
       );
+      this.checkBadge();
       this.service.engagerManager(manager).catch(reason => console.log("erreur: " + reason) );
     } else {
       throw new Error(
@@ -132,6 +135,28 @@ export class AppComponent {
       this.popMessage(
         "L'unlock " + palier.name + " vient d'être débloqué!"
       );
+    }
+  }
+
+  checkBadge() {
+    const money = this.world.money;
+    const managers = this.world.managers.filter(m =>
+      m.seuil <= money &&
+      m.unlocked === false)
+    const upgrades = this.world.upgrades.filter(u =>
+      u.seuil <= money &&
+      u.unlocked === false)
+
+    if(managers.length) {
+      this.badgeManagers = 1;
+    } else {
+      this.badgeManagers = 0;
+    }
+
+    if(upgrades.length) {
+      this.badgeUpgrades = 1;
+    } else {
+      this.badgeUpgrades = 0;
     }
   }
 
