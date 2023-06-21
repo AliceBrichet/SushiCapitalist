@@ -38,6 +38,15 @@ export class AppComponent {
       });
   }
 
+  /*ngOnInit(){
+    window.addEventListener("beforeunload", function (e) {
+      var confirmationMessage = "\o/";
+      e.returnValue = confirmationMessage;
+      return confirmationMessage;
+    });
+    this.service.getWorld().catch(reason => console.log("erreur: " + reason) );
+  }*/
+
   show(state: boolean, route: string) {
     const el = document.getElementById(route);
     if (state) {

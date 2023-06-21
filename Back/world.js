@@ -26,7 +26,7 @@ module.exports = {
                     "seuil": 25,
                     "idcible": 0,
                     "ratio": 2,
-                    "typeratio": "gain",
+                    "typeratio": "vitesse",
                     "unlocked": false
                 },
                 {
@@ -238,7 +238,7 @@ module.exports = {
                     "seuil": 25,
                     "idcible": 1,
                     "ratio": 2,
-                    "typeratio": "gain",
+                    "typeratio": "vitesse",
                     "unlocked": false
                 },
                 {
@@ -450,7 +450,7 @@ module.exports = {
                     "seuil": 25,
                     "idcible": 2,
                     "ratio": 2,
-                    "typeratio": "gain",
+                    "typeratio": "vitesse",
                     "unlocked": false
                 },
                 {
@@ -662,7 +662,7 @@ module.exports = {
                     "seuil": 25,
                     "idcible": 3,
                     "ratio": 2,
-                    "typeratio": "gain",
+                    "typeratio": "vitesse",
                     "unlocked": false
                 },
                 {
@@ -874,7 +874,7 @@ module.exports = {
                     "seuil": 25,
                     "idcible": 4,
                     "ratio": 2,
-                    "typeratio": "gain",
+                    "typeratio": "vitesse",
                     "unlocked": false
                 },
                 {
@@ -1086,7 +1086,7 @@ module.exports = {
                     "seuil": 25,
                     "idcible": 5,
                     "ratio": 2,
-                    "typeratio": "gain",
+                    "typeratio": "vitesse",
                     "unlocked": false
                 },
                 {
@@ -1299,7 +1299,7 @@ module.exports = {
             "seuil": 250000,
             "idcible": 0,
             "ratio": 3,
-            "typeratio": "gain",
+            "typeratio": "vitesse",
             "unlocked": false
         },
         {
